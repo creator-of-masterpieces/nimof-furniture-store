@@ -13,56 +13,102 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  line-height: 1.15; /* Базовая высота строки */
+  -webkit-text-size-adjust: 100%; /* Корректировка размера текста в Safari */
+  -ms-text-size-adjust: 100%;
 }
 
 body {
+  min-height: 100vh; /* Минимум на высоту экрана */
+  font-family: system-ui, -apple-system, sans-serif; /* Системный шрифт */
+  color: #212529; /* Основной цвет текста */
+  background-color: #fff; /* Фон по умолчанию */
+}
+
+/* Убираем отступы у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Ссылки без подчёркивания */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Кнопки и поля ввода без стилей браузера */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* Используем шрифт родителя */
+  color: inherit;
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Убираем рамку */
+  outline: none; /* Убираем фокус-рамку */
+}
+
+/* Корректировка изображений */
+img {
+  max-width: 100%; /* Адаптивность */
+  height: auto; /* Сохранение пропорций */
+  display: block; /* Убираем пробелы под изображениями */
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse; /* Слияние границ */
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem; /* Отступы внутри ячеек */
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit; /* Размер по умолчанию */
+  font-weight: 500; /* Средний вес */
+  margin-bottom: 0.5rem;
+}
+
+/* Параграфы */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Формы */
+fieldset {
+  border: 0; /* Убираем рамку */
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+legend {
+  padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Элементы с фокусом */
+:focus {
+  outline: 2px solid #007bff; /* Синий контур для фокусировки */
+  outline-offset: 2px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Скрытые элементы */
+[hidden] {
+  display: none !important;
 }
