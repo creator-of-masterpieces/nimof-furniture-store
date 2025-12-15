@@ -1,16 +1,49 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Цветовая палитра */
+  --color-primary: #1a1a1a;
+  --color-secondary: #fff;
+  --color-accent: #d4a373;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #1a1a1a;
+  --color-muted: #999999;
+  --color-error: #e63946;
+  --color-button-primary: #d4a373;
+  --color-button-secondary: #fff;
+  --color-button-primary-hover: #c08a5a;
+  --color-button-secondary-hover: #fff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Типографика */
+  --font-family-base: 'Montserrat', Arial, Helvetica;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-xl: 32px;
+  --font-size-section-title: 40px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Отступы */
+  --section-padding-top: 100px;
+
+  /* Контейнеры и сетки */
+  --container-max-width: 1280px;
+  --grid-gap: 20px;
+
+  /* Границы и скругления */
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --border-width: 1px;
+  --border-color: #e0e0e0;
+
+  /* Тени */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  /*Анимация*/
+  --transition-color: color 0.3s ease;
 }
 
 /* CSS Reset */
@@ -87,7 +120,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Параграфы */
 p {
-  margin-bottom: 1rem;
   line-height: 1.5;
 }
 
