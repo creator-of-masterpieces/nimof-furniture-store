@@ -1,4 +1,4 @@
-const MainPage = () => {
+const AboutPage = ()=> {
     return (
         <>
             <header>Шапка</header>
@@ -8,4 +8,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage;
+export default AboutPage;

@@ -1,4 +1,4 @@
-const MainPage = () => {
+const ContactPage = ()=> {
     return (
         <>
             <header>Шапка</header>
@@ -8,4 +8,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage;
+export default ContactPage;
