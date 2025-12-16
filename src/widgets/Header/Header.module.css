@@ -1,0 +1,35 @@
+.header {
+
+}
+
+.top {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-secondary);
+    padding: .5rem 1rem;
+}
+
+.contactsList {
+    display: flex;
+    justify-content: flex-end;
+    max-inline-size: 1280px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.contactsListItem {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    padding: .5rem 1rem;
+}
+
+.navigation {
+    max-inline-size: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
