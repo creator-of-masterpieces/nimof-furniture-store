@@ -56,16 +56,12 @@
 }
 
 html {
-  line-height: 1.15; /* Базовая высота строки */
   -webkit-text-size-adjust: 100%; /* Корректировка размера текста в Safari */
   -ms-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh; /* Минимум на высоту экрана */
-  font-family: system-ui, -apple-system, sans-serif; /* Системный шрифт */
-  color: #212529; /* Основной цвет текста */
-  background-color: #fff; /* Фон по умолчанию */
 }
 
 /* Убираем отступы у списков */
@@ -114,12 +110,6 @@ td {
 /* Заголовки */
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit; /* Размер по умолчанию */
-  font-weight: 500; /* Средний вес */
-}
-
-/* Параграфы */
-p {
-  line-height: 1.5;
 }
 
 /* Формы */

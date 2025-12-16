@@ -8,3 +8,7 @@
 .contactLink:focus-visible {
     color: var(--color-accent);
 }
+
+.icon{
+    margin-inline-end: 5px;
+}
