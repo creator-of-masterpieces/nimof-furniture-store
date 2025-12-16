@@ -115,7 +115,6 @@ td {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit; /* Размер по умолчанию */
   font-weight: 500; /* Средний вес */
-  margin-bottom: 0.5rem;
 }
 
 /* Параграфы */
@@ -132,12 +131,6 @@ fieldset {
 
 legend {
   padding: 0;
-}
-
-/* Элементы с фокусом */
-:focus {
-  outline: 2px solid #007bff; /* Синий контур для фокусировки */
-  outline-offset: 2px;
 }
 
 /* Скрытые элементы */
