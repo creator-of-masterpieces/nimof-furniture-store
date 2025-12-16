@@ -1,8 +1,9 @@
+import Header from "../widgets/Header/Header.tsx";
 
 const MainPage = () => {
     return (
         <>
-            <header>Шапка</header>
+            <Header></Header>
             <main>Контент</main>
             <footer>Подвал</footer>
         </>
