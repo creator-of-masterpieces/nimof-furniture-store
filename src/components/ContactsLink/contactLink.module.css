@@ -1,0 +1,10 @@
+.contactLink {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-color);
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+    color: var(--color-accent);
+}
