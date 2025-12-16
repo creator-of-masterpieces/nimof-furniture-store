@@ -1,3 +1,4 @@
+import './styles/style.css';
 import MainPage from "./pages/MainPage.tsx";
 
 
