@@ -1,4 +1,5 @@
 .cta {
+    color: var(--color-secondary);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -6,12 +7,12 @@
 
 .ctaPrimary {
     padding: 200px 20px 130px;
-    color: var(--color-secondary);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/living-room.jpg');
 }
 
 .ctaSecondary {
-    background-color: #000;
+    padding: 70px 20px;
+    background-color: var(--color-bg-secondary);
 }
 
 .container {
@@ -28,6 +29,10 @@
     line-height: 1.2;
     font-weight: var(--font-weight-bold);
     text-align: center;
+}
+
+.ctaSecondary .title {
+    font-size: var(--font-size-section-title);
 }
 
 .description {
