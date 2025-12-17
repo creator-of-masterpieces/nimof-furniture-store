@@ -1,0 +1,49 @@
+.footer {
+    inline-size: 100%;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-muted);
+    /*padding: 100px 0 30px;*/
+
+
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    /*padding: 20px 20px 50px;*/
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.cardTitle {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #d4a373;
+    }
+}
+
+
+
+.navFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
