@@ -2,7 +2,6 @@ import style from './mainPage.module.css'
 import Header from "../../widgets/Header/Header.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
-import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
 
 const MainPage = () => {
     return (
@@ -36,7 +35,6 @@ const MainPage = () => {
                         type={'button'}
                         onClick={()=> alert('Вот тебе консультация!')}>Получить консультацию</LinkButton>
                 </CallToAction>
-                <CategoryCards title={'Наши работы'}/>
             </main>
             <footer>Подвал</footer>
         </div>
