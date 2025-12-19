@@ -3,6 +3,7 @@ import Header from "../../widgets/Header/Header.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
+import {Footer} from "../../widgets/Footer/Footer.tsx";
 
 const MainPage = () => {
     return (
@@ -40,7 +41,7 @@ const MainPage = () => {
                         onClick={() => alert('Вот тебе консультация!')}>Получить консультацию</LinkButton>
                 </CallToAction>
             </main>
-            <footer>Подвал</footer>
+            <Footer />
         </div>
     )
 }
