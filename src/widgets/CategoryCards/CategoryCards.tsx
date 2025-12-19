@@ -1,5 +1,6 @@
 import style from './CategoryCards.module.css';
 import clsx from "clsx";
+import CategoryCard from "../../components/CategoryCard/CategoryCard.tsx";
 
 interface ICategoryCardsProps {
     title: string;
@@ -13,11 +14,11 @@ const CategoryCards = (props: ICategoryCardsProps) => {
             <div className={style.content}>
                 <h2 className={style.categoryTitle}>{title}</h2>
                 <ul className={style.categoryList}>
-                    <li>Гостиная</li>
-                    <li>Кухня</li>
-                    <li>Ванная комната</li>
-                    <li>Санузел</li>
-                    <li>Шкафы</li>
+                    <li><CategoryCard to={'/catalog'} title={'Гостиная'} image={'/src/assets/images/kitchen.webp'}/></li>
+                    <li><CategoryCard to={'/catalog'} title={'Кухня'} image={'/src/assets/images/kitchen.webp'}/></li>
+                    <li><CategoryCard to={'/catalog'} title={'Ванная комната'} image={'/src/assets/images/kitchen.webp'}/></li>
+                    <li><CategoryCard to={'/catalog'} title={'Санузел'} image={'/src/assets/images/kitchen.webp'}/></li>
+                    <li><CategoryCard to={'/catalog'} title={'Шкафы'} image={'/src/assets/images/kitchen.webp'}/></li>
                 </ul>
             </div>
         </section>

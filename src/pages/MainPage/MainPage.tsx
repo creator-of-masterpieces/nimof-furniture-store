@@ -18,10 +18,13 @@ const MainPage = () => {
                         appearance={'primary'}
                         to={'/catalog'}>Наши работы</LinkButton>
                     <LinkButton
-                                type={'link'}
-                                appearance={'secondary'}
-                                to={'/about'}>Подробнее о бренде</LinkButton>
+                        type={'link'}
+                        appearance={'secondary'}
+                        to={'/about'}>Подробнее о бренде</LinkButton>
                 </CallToAction>
+
+                <CategoryCards title={'Наши работы'}/>
+
                 <CallToAction
                     title={'Создайте дом своей мечты с Nimof'}
                     description={'Мы предлагаем широкий выбор качественной мебели и сантехники для вашего дома'}
@@ -34,9 +37,8 @@ const MainPage = () => {
                     <LinkButton
                         appearance={'secondary'}
                         type={'button'}
-                        onClick={()=> alert('Вот тебе консультация!')}>Получить консультацию</LinkButton>
+                        onClick={() => alert('Вот тебе консультация!')}>Получить консультацию</LinkButton>
                 </CallToAction>
-                <CategoryCards title={'Наши работы'}/>
             </main>
             <footer>Подвал</footer>
         </div>

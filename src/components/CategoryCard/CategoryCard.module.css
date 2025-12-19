@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 300px;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.5) 20%, transparent 30%), url("/src/assets/images/kitchen.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px 0;
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-visible{
+    translate: 0 -5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 10px 20px 0;
+}
+
+.cardTitle {
+    color: var(--color-secondary);
+    font-size: 28px;
+    font-weight: 600;
+}
