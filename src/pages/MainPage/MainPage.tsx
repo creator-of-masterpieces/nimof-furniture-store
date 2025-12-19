@@ -2,6 +2,7 @@ import style from './mainPage.module.css'
 import Header from "../../widgets/Header/Header.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
+import {Footer} from "../../widgets/Footer/Footer.tsx";
 
 const MainPage = () => {
     return (
@@ -37,6 +38,7 @@ const MainPage = () => {
                 </CallToAction>
             </main>
             <footer>Подвал</footer>
+            <Footer />
         </div>
     )
 }
