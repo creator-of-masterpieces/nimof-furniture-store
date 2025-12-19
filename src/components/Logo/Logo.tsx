@@ -1,4 +1,4 @@
-import style from './logo.module.scss';
+import style from './logo.module.css';
 import {Link, useLocation} from "react-router-dom";
 
 const Logo = () => {
