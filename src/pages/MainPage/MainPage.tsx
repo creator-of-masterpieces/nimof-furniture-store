@@ -4,6 +4,7 @@ import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
 import {Footer} from "../../widgets/Footer/Footer.tsx";
+import FeaturesSection from "../../widgets/FeaturesSection/FeaturesSection.tsx";
 
 const MainPage = () => {
     return (
@@ -25,6 +26,7 @@ const MainPage = () => {
                 </CallToAction>
 
                 <CategoryCards title={'Наши работы'}/>
+                <FeaturesSection></FeaturesSection>
 
                 <CallToAction
                     title={'Создайте дом своей мечты с Nimof'}
