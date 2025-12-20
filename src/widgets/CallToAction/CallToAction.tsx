@@ -15,7 +15,7 @@ const CallToAction = (props: ICallToActionProps) => {
         <section
             className={clsx(style.cta, type === 'primary' ? style.ctaPrimary : style.ctaSecondary, className || '')}>
             <div className={style.container}>
-                <h1 className={style.title}>{title}</h1>
+                <h2 className={style.title}>{title}</h2>
                 <p className={style.description}>{description}</p>
                 <div className={style.buttonsContainer}>
                     {children}
