@@ -5,6 +5,7 @@ import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
 import {Footer} from "../../widgets/Footer/Footer.tsx";
 import FeaturesSection from "../../widgets/FeaturesSection/FeaturesSection.tsx";
+import {Map} from "../../components/Map/Map.tsx";
 
 const MainPage = () => {
     return (
@@ -42,6 +43,7 @@ const MainPage = () => {
                         type={'button'}
                         onClick={() => alert('Вот тебе консультация!')}>Получить консультацию</LinkButton>
                 </CallToAction>
+              <Map />
             </main>
             <Footer />
         </div>
