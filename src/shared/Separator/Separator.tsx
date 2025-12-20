@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import styles from "./separator.module.css"
 type TSeparatorProps = {
     className: string;
 }
@@ -8,7 +10,7 @@ export const Separator = (props: TSeparatorProps) => {
 
     return (
         <>
-            <hr className={className}/>
+            <hr className={clsx(styles.separatorSize,className)}/>
         </>
     )
 }
