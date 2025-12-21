@@ -1,11 +1,12 @@
-import Header from "../widgets/Header/Header.tsx";
-import LinkButton from "../components/LinkButton/LinkButton.tsx";
-import CallToAction from "../widgets/CallToAction/CallToAction.tsx";
-import { Footer } from "../widgets/Footer/Footer.tsx";
+import style from "./catalogPage.module.css";
+import Header from "../../widgets/Header/Header.tsx";
+import LinkButton from "../../components/LinkButton/LinkButton.tsx";
+import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
+import { Footer } from "../../widgets/Footer/Footer.tsx";
 
 const CatalogPage = () => {
   return (
-    <>
+    <div className={style.pageContainer}>
       <Header />
       <main>
         {/*  Секция CTA */}
@@ -31,7 +32,7 @@ const CatalogPage = () => {
         <section>Карточки товаров</section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
