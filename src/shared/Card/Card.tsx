@@ -1,17 +1,12 @@
-import type {ReactNode} from "react";
+import type { ReactNode } from "react";
 
 type TCardProps = {
-    children: ReactNode,
-    className: string,
-}
+  children: ReactNode;
+  className: string;
+};
 
 export const Card = (props: TCardProps) => {
+  const { children, className } = props;
 
-    const { children, className } = props
-
-    return (
-        <article className={className}>
-            {children}
-        </article>
-    )
-}
+  return <article className={className}>{children}</article>;
+};
