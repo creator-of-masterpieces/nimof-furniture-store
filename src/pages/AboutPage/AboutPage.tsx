@@ -5,6 +5,8 @@ import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
 import SectionTitle from "../../components/SectionTitle/SectionTitle.tsx";
 import clsx from "clsx";
+import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
+import { FaHeadset, FaPenNib, FaWrench, FaTruck } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
@@ -50,8 +52,40 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section>
+        <section className={clsx(style.section, style.workProcessSection)}>
           <SectionTitle title={"Как мы работаем"} />
+          <ul className={style.cardList}>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaHeadset}
+                title={"Консультация"}
+                description={
+                  "Профессиональная консультация и подбор мебели в соответствии с вашими потребностями и предпочтениями"
+                }
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaPenNib}
+                title={"Проектирование"}
+                description={"Разработка детального дизайн-проекта с учетом особенностей вашего пространства"}
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaWrench}
+                title={"Производство"}
+                description={"Изготовление мебели на собственном производстве с использованием качественных материалов"}
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaTruck}
+                title={"Консультация"}
+                description={"Быстрая доставка и профессиональная сборка мебели на месте"}
+              />
+            </li>
+          </ul>
         </section>
       </main>
 
