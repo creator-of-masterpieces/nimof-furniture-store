@@ -3,6 +3,10 @@ import Header from "../../widgets/Header/Header.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
+import SectionTitle from "../../components/SectionTitle/SectionTitle.tsx";
+import clsx from "clsx";
+import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
+import { FaHeadset, FaPenNib, FaWrench, FaTruck } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
@@ -25,9 +29,64 @@ const AboutPage = () => {
           </LinkButton>
         </CallToAction>
 
-        <section>Наши история</section>
+        <section className={clsx(style.historySection, style.section)}>
+          <div className={style.historyDescription}>
+            <SectionTitle title={"Наша история"} />
+            <p className={style.historyText}>
+              Компания Nimof была основана в 2010 году группой энтузиастов, объединенных любовью к качественной мебели и
+              эргономичным решениям для жилых и рабочих пространств. За эти годы мы выросли из небольшой мастерской в
+              ведущего производителя мебели в Москве и Московской области.
+            </p>
+            <p className={style.historyText}>
+              Мы гордимся тем, что наша мебель находится в тысячах домов и офисов, делая жизнь людей комфортнее и
+              удобнее. Наша цель — не просто продавать мебель, а создавать уникальные решения, которые идеально
+              вписываются в пространство и отвечают всем потребностям наших клиентов.
+            </p>
+          </div>
 
-        <section>Как мы работаем</section>
+          <div className={style.historyMedia}>
+            <img
+              src="/src/assets/images/living-room.jpg"
+              alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
+            />
+          </div>
+        </section>
+
+        <section className={clsx(style.section, style.workProcessSection)}>
+          <SectionTitle title={"Как мы работаем"} />
+          <ul className={style.cardList}>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaHeadset}
+                title={"Консультация"}
+                description={
+                  "Профессиональная консультация и подбор мебели в соответствии с вашими потребностями и предпочтениями"
+                }
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaPenNib}
+                title={"Проектирование"}
+                description={"Разработка детального дизайн-проекта с учетом особенностей вашего пространства"}
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaWrench}
+                title={"Производство"}
+                description={"Изготовление мебели на собственном производстве с использованием качественных материалов"}
+              />
+            </li>
+            <li className={style.cardItem}>
+              <FeatureCard
+                icon={FaTruck}
+                title={"Консультация"}
+                description={"Быстрая доставка и профессиональная сборка мебели на месте"}
+              />
+            </li>
+          </ul>
+        </section>
       </main>
 
       <Footer />
