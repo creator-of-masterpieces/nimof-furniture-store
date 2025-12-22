@@ -4,3 +4,47 @@
     line-height: var(--line-height-base);
     color: var(--color-primary);
 }
+
+.section {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding: 100px 10px;
+}
+
+.contactsSection {
+    display: flex;
+    column-gap: 30px;
+}
+
+.companyContactsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--grid-gap);
+    width: 100%;
+}
+
+.companyContactsList {
+    inline-size: 100%;
+}
+
+.companyContactsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--grid-gap);
+    block-size: 100%;
+    padding: 50px 30px;
+    border: 1px solid #e9e8f3;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.companyContactsSection {
+    inline-size: 50%;
+}
+
+
+
+.contactsFormSection {
+
+}

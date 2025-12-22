@@ -31,7 +31,7 @@ const AboutPage = () => {
 
         <section className={clsx(style.historySection, style.section)}>
           <div className={style.historyDescription}>
-            <SectionTitle title={"Наша история"} />
+            <SectionTitle tag={"h2"} title={"Наша история"} />
             <p className={style.historyText}>
               Компания Nimof была основана в 2010 году группой энтузиастов, объединенных любовью к качественной мебели и
               эргономичным решениям для жилых и рабочих пространств. За эти годы мы выросли из небольшой мастерской в
@@ -53,7 +53,7 @@ const AboutPage = () => {
         </section>
 
         <section className={clsx(style.section, style.workProcessSection)}>
-          <SectionTitle title={"Как мы работаем"} />
+          <SectionTitle tag={"h2"} title={"Как мы работаем"} />
           <ul className={style.cardList}>
             <li className={style.cardItem}>
               <FeatureCard

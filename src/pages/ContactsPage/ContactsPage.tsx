@@ -4,6 +4,9 @@ import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Map } from "../../components/Map/Map.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
+import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
+import clsx from "clsx";
 
 const ContactsPage = () => {
   return (
@@ -24,9 +27,32 @@ const ContactsPage = () => {
             Подробнее о бренде
           </LinkButton>
         </CallToAction>
-        <section>
-          <div>Контакты</div>
-          <div>Напишите нам</div>
+        <section className={clsx(style.section, style.contactsSection)}>
+          <div className={style.companyContactsSection}>
+            <ul className={style.companyContactsList}>
+              <li className={style.companyContactsItem}>
+                <FeatureCard
+                  icon={FaMapMarkerAlt}
+                  title={"Адрес"}
+                  description={"МКАД, 25-й километр, 4с1 Москва, Россия"}
+                />
+              </li>
+              <li className={style.companyContactsItem}>
+                <FeatureCard icon={FaPhone} title={"Телефон"} description={"+7 (968) 888-66-68"} />
+              </li>
+              <li className={style.companyContactsItem}>
+                <FeatureCard icon={FaEnvelope} title={"Email"} description={"info@nimof.ru sales@nimof.ru"} />
+              </li>
+              <li className={style.companyContactsItem}>
+                <FeatureCard
+                  icon={FaClock}
+                  title={"Режим работы"}
+                  description={"Пн-Пт: 10:00 - 20:00 Сб-Вс: 11:00 - 18:00"}
+                />
+              </li>
+            </ul>
+          </div>
+          <div className={style.contactsFormSection}>Напишите нам</div>
         </section>
         <Map />
       </main>
