@@ -4,3 +4,33 @@
     line-height: var(--line-height-base);
     color: var(--color-primary);
 }
+
+.section {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-block: 100px;
+}
+
+.historySection {
+    display: flex;
+    align-items: start;
+    gap: var(--grid-gap);
+}
+
+.historyDescription {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    row-gap: 20px;
+}
+
+.historyText {
+    max-width: 60ch;
+}
+
+.historyMedia {
+    flex: 1 1 50%;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-card);
+}
