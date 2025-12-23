@@ -93,6 +93,7 @@ img {
   max-width: 100%; /* Адаптивность */
   height: auto; /* Сохранение пропорций */
   display: block; /* Убираем пробелы под изображениями */
+  object-fit: cover;
 }
 
 /* Таблицы */
@@ -130,4 +131,21 @@ address {
 /* Скрытые элементы */
 [hidden] {
   display: none !important;
+}
+
+/* Стили для библиотеки swiper */
+
+/* Размеры слайдера */
+.swiper {
+  width: 100%;
+  height: 300px; /* задайте нужную высоту слайдера */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
