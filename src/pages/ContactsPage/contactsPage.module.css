@@ -43,8 +43,13 @@
     inline-size: 50%;
 }
 
-
-
 .contactsFormSection {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contactsForm {
 
 }

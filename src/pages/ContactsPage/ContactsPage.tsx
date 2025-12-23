@@ -7,12 +7,15 @@ import { Footer } from "../../widgets/Footer/Footer.tsx";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import clsx from "clsx";
+import SectionTitle from "../../components/SectionTitle/SectionTitle.tsx";
+import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
 
 const ContactsPage = () => {
   return (
     <div className={style.pageContainer}>
       <Header />
       <main>
+        {/*Секция Call To Action */}
         <CallToAction
           title={"Мебель, с которой начинается день"}
           description={
@@ -27,7 +30,10 @@ const ContactsPage = () => {
             Подробнее о бренде
           </LinkButton>
         </CallToAction>
+
+        {/*Секция Contacts */}
         <section className={clsx(style.section, style.contactsSection)}>
+          {/*Блок company contacts*/}
           <div className={style.companyContactsSection}>
             <ul className={style.companyContactsList}>
               <li className={style.companyContactsItem}>
@@ -52,7 +58,11 @@ const ContactsPage = () => {
               </li>
             </ul>
           </div>
-          <div className={style.contactsFormSection}>Напишите нам</div>
+          {/*Блок contacts form*/}
+          <div className={style.contactsFormSection}>
+            <SectionTitle tag={"h2"} title={"Напишите нам"} />
+            <ContactsForm />
+          </div>
         </section>
         <Map />
       </main>
