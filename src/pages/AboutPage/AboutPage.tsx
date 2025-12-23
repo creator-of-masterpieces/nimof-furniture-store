@@ -56,34 +56,26 @@ const AboutPage = () => {
           <SectionTitle tag={"h2"} title={"Как мы работаем"} />
           <ul className={style.cardList}>
             <li className={style.cardItem}>
-              <FeatureCard
-                icon={FaHeadset}
-                title={"Консультация"}
-                description={
-                  "Профессиональная консультация и подбор мебели в соответствии с вашими потребностями и предпочтениями"
-                }
-              />
+              <FeatureCard icon={FaHeadset} title={"Консультация"}>
+                <p>
+                  Профессиональная консультация и подбор мебели в соответствии с вашими потребностями и предпочтениями
+                </p>
+              </FeatureCard>
             </li>
             <li className={style.cardItem}>
-              <FeatureCard
-                icon={FaPenNib}
-                title={"Проектирование"}
-                description={"Разработка детального дизайн-проекта с учетом особенностей вашего пространства"}
-              />
+              <FeatureCard icon={FaPenNib} title={"Проектирование"}>
+                <p>Разработка детального дизайн-проекта с учетом особенностей вашего пространства</p>
+              </FeatureCard>
             </li>
             <li className={style.cardItem}>
-              <FeatureCard
-                icon={FaWrench}
-                title={"Производство"}
-                description={"Изготовление мебели на собственном производстве с использованием качественных материалов"}
-              />
+              <FeatureCard icon={FaWrench} title={"Производство"}>
+                <p>Изготовление мебели на собственном производстве с использованием качественных материалов</p>
+              </FeatureCard>
             </li>
             <li className={style.cardItem}>
-              <FeatureCard
-                icon={FaTruck}
-                title={"Консультация"}
-                description={"Быстрая доставка и профессиональная сборка мебели на месте"}
-              />
+              <FeatureCard icon={FaTruck} title={"Консультация"}>
+                <p>Быстрая доставка и профессиональная сборка мебели на месте</p>
+              </FeatureCard>
             </li>
           </ul>
         </section>

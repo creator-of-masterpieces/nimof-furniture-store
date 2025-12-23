@@ -36,24 +36,26 @@ const ContactsPage = () => {
           <div className={style.companyContactsSection}>
             <ul className={style.companyContactsList}>
               <li className={style.companyContactsItem}>
-                <FeatureCard
-                  icon={FaMapMarkerAlt}
-                  title={"Адрес"}
-                  description={"МКАД, 25-й километр, 4с1 Москва, Россия"}
-                />
+                <FeatureCard icon={FaMapMarkerAlt} title={"Адрес"}>
+                  <address>МКАД, 25-й километр, 4с1 Москва, Россия</address>
+                </FeatureCard>
               </li>
               <li className={style.companyContactsItem}>
-                <FeatureCard icon={FaPhone} title={"Телефон"} description={"+7 (968) 888-66-68"} />
+                <FeatureCard icon={FaPhone} title={"Телефон"}>
+                  <a href="tel:+79688886668">+7 (968) 888-66-68</a>
+                </FeatureCard>
               </li>
               <li className={style.companyContactsItem}>
-                <FeatureCard icon={FaEnvelope} title={"Email"} description={"info@nimof.ru sales@nimof.ru"} />
+                <FeatureCard icon={FaEnvelope} title={"Email"}>
+                  <a href="mailto:info@nimof.ru">info@nimof.ru</a>
+                  <a href="mailto:sales@nimof.ru">sales@nimof.ru</a>
+                </FeatureCard>
               </li>
               <li className={style.companyContactsItem}>
-                <FeatureCard
-                  icon={FaClock}
-                  title={"Режим работы"}
-                  description={"Пн-Пт: 10:00 - 20:00 Сб-Вс: 11:00 - 18:00"}
-                />
+                <FeatureCard icon={FaClock} title={"Режим работы"}>
+                  <p>Пн-Пт: 10:00 - 20:00</p>
+                  <p>Сб-Вс: 11:00 - 18:00</p>
+                </FeatureCard>
               </li>
             </ul>
           </div>

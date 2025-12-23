@@ -123,6 +123,10 @@ legend {
   padding: 0;
 }
 
+address {
+  font: inherit;
+}
+
 /* Скрытые элементы */
 [hidden] {
   display: none !important;
