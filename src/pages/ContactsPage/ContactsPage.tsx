@@ -7,7 +7,6 @@ import { Footer } from "../../widgets/Footer/Footer.tsx";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import clsx from "clsx";
-import SectionTitle from "../../components/SectionTitle/SectionTitle.tsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
 
 const ContactsPage = () => {
@@ -58,9 +57,10 @@ const ContactsPage = () => {
               </li>
             </ul>
           </div>
+
           {/*Блок contacts form*/}
           <div className={style.contactsFormSection}>
-            <SectionTitle tag={"h2"} title={"Напишите нам"} />
+            <h2 className={style.formSectionTitle}>Напишите нам</h2>
             <ContactsForm />
           </div>
         </section>

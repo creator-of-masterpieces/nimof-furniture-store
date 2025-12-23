@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "../../pages/ContactsPage/contactsPage.module.css";
+import style from "./contactsForm.module.css";
 interface IFormData {
   name: string;
   email: string;
@@ -28,20 +28,24 @@ const ContactsForm = () => {
   };
   return (
     <form className={style.contactsForm} onSubmit={submitHandler}>
-      <div>
+      <div className={style.formGroup}>
         <label htmlFor="nameId">Ваше имя</label>
-        <input id={"nameId"} name={"name"} type="text" onChange={changeHandler} required />
+        <input className={style.formInput} id={"nameId"} name={"name"} type="text" onChange={changeHandler} required />
       </div>
 
-      <div>
+      <div className={style.formGroup}>
         <label htmlFor="phoneId">Телефон</label>
-        <input id={"phoneId"} name={"phone"} type="tel" onChange={changeHandler} required />
+        <input className={style.formInput} id={"phoneId"} name={"phone"} type="tel" onChange={changeHandler} required />
       </div>
 
-      <div>
+      <div className={style.formGroup}>
         <label htmlFor="emailId">Email</label>
-        <input id={"emailId"} name={"email"} type="email" onChange={changeHandler} />
+        <input className={style.formInput} id={"emailId"} name={"email"} type="email" onChange={changeHandler} />
       </div>
+
+      <button className={style.submitButton} type={"submit"}>
+        Отправить
+      </button>
     </form>
   );
 };
