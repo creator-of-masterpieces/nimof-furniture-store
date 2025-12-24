@@ -1,5 +1,5 @@
 import style from "./FeaturesSection.module.css";
-import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
+import FeatureCard from "../../../components/FeatureCard/FeatureCard.tsx";
 import { FaCheckCircle, FaPalette, FaCog, FaHeart } from "react-icons/fa";
 
 const FeaturesSection = () => {

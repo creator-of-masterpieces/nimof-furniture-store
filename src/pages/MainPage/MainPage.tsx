@@ -4,7 +4,7 @@ import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
-import FeaturesSection from "../../widgets/FeaturesSection/FeaturesSection.tsx";
+import FeaturesSection from "../../widgets/Sections/FeaturesSection/FeaturesSection.tsx";
 import { Map } from "../../components/Map/Map.tsx";
 
 const MainPage = () => {

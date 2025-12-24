@@ -1,0 +1,15 @@
+.cardsSection {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding: var(--section-padding-top) 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
