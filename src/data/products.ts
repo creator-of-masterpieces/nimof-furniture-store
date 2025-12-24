@@ -15,7 +15,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
   {
@@ -23,7 +23,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
   {
@@ -31,7 +31,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
   {
@@ -39,7 +39,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
   {
@@ -47,7 +47,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
   {
@@ -55,7 +55,7 @@ export const products: IProducts[] = [
     image: "/src/assets/images/living-room.jpg",
     alt: "Фото гостиной",
     title: "Гостиная Welcome",
-    price: "39990",
+    price: "39 990₽",
     description: "Описание гостиной",
   },
 ];
