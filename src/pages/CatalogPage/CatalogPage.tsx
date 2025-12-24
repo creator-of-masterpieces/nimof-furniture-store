@@ -3,7 +3,7 @@ import Header from "../../widgets/Header/Header.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
-import CatalogCard from "../../components/CatalogCard/CatalogCard.tsx";
+import ProductsSection from "../../widgets/Sections/ProductsSection/ProductsSection.tsx";
 
 const CatalogPage = () => {
   return (
@@ -25,15 +25,10 @@ const CatalogPage = () => {
             Подробнее о бренде
           </LinkButton>
         </CallToAction>
-
         {/* Секция фильтров */}
         <aside>Фильтры</aside>
-
         {/* Секция карточек */}
-        <section>
-          <h2>Карточки товаров</h2>
-          <CatalogCard />
-        </section>
+        <ProductsSection />
       </main>
       <Footer />
     </div>
