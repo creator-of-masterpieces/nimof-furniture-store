@@ -3,6 +3,7 @@ import Header from "../../widgets/Header/Header.tsx";
 import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
+import CatalogCard from "../../components/CatalogCard/CatalogCard.tsx";
 
 const CatalogPage = () => {
   return (
@@ -29,7 +30,10 @@ const CatalogPage = () => {
         <aside>Фильтры</aside>
 
         {/* Секция карточек */}
-        <section>Карточки товаров</section>
+        <section>
+          <h2>Карточки товаров</h2>
+          <CatalogCard />
+        </section>
       </main>
       <Footer />
     </div>
