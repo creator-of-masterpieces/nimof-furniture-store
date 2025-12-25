@@ -4,6 +4,7 @@ import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
 import ProductsSection from "../../widgets/Sections/ProductsSection/ProductsSection.tsx";
+import TestSwiper from "../../components/TestSwiper/TestSwiper.tsx";
 
 const CatalogPage = () => {
   return (
@@ -26,7 +27,9 @@ const CatalogPage = () => {
           </LinkButton>
         </CallToAction>
         {/* Секция фильтров */}
-        <aside>Фильтры</aside>
+        <aside>
+          <TestSwiper />
+        </aside>
         {/* Секция карточек */}
         <ProductsSection />
       </main>
