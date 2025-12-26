@@ -4,6 +4,8 @@ import LinkButton from "../../components/LinkButton/LinkButton.tsx";
 import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
 import ProductsSection from "../../widgets/Sections/ProductsSection/ProductsSection.tsx";
+import TestSwiper from "../../components/TestSwiper/TestSwiper.tsx";
+import clsx from "clsx";
 
 const CatalogPage = () => {
   return (
@@ -25,10 +27,15 @@ const CatalogPage = () => {
             Подробнее о бренде
           </LinkButton>
         </CallToAction>
-        {/* Секция фильтров */}
-        <aside>Фильтры</aside>
-        {/* Секция карточек */}
-        <ProductsSection />
+
+        <div className={clsx(style.filtersGalleryWrap, style.section)}>
+          {/* Секция фильтров */}
+          <aside>
+            <TestSwiper />
+          </aside>
+          {/* Секция карточек */}
+          <ProductsSection />
+        </div>
       </main>
       <Footer />
     </div>
