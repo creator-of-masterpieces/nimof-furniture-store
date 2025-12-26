@@ -9,7 +9,7 @@ interface IModalProps {
   title: string;
 }
 const Modal = (props: IModalProps) => {
-  const { isOpen, onClose, children, title } = props;
+  const { isOpen, onClose, children } = props;
 
   // Ссылка на модальное окно
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -38,6 +38,7 @@ const Modal = (props: IModalProps) => {
     if (dialog) {
       dialog.addEventListener("close", handleClose);
     }
+
     return () => {
       if (dialog) {
         dialog.removeEventListener("close", handleClose);
@@ -45,15 +46,20 @@ const Modal = (props: IModalProps) => {
     };
   }, [onClose]);
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (e.currentTarget === e.target) {
+      onClose();
+    }
+  };
+
   if (!isOpen) return null;
 
   return createPortal(
-    <dialog className={style.modal} ref={dialogRef}>
+    <dialog className={style.modal} ref={dialogRef} onClick={handleClick}>
       <div className={style.modalContent}>
-        <h2 className={style.modalTitle}>{title}</h2>
         {children}
         <button className={style.closeButton} onClick={onClose}>
-          Закрыть
+          &times;
         </button>
       </div>
     </dialog>,

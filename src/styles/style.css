@@ -133,14 +133,24 @@ address {
   display: none !important;
 }
 
-/*Глобальные стили*/
+/*------- ГЛОБАЛЬНЫЕ СТИЛИ -------*/
+body {
+  scrollbar-gutter: stable;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+  padding-inline-end: 17px;
+}
+
+/*Модальные окна*/
 #modal-root {
   display: none;
 }
 
 #modal-root.active {
-  display: block;
   position: fixed;
+  display: block;
   inset: 0;
   z-index: 1000;
   background: transparent;
