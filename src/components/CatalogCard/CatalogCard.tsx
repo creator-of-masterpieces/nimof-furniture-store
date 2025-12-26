@@ -1,5 +1,7 @@
 import style from "./catalogCard.module.css";
 import { Link } from "react-router-dom";
+import Modal from "../Modal/Modal.tsx";
+import { useState } from "react";
 
 interface ICatalogCardProps {
   image: string;
@@ -11,13 +13,25 @@ interface ICatalogCardProps {
 
 const CatalogCard = (props: ICatalogCardProps) => {
   const { image, alt, title, description, price } = props;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleContact = () => {
     alert("Открылась окно с формой обратной связи!");
   };
+
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+    alert(`Открылась окно с информацией о товаре! isModalOpen: ${isModalOpen}`);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <figure className={style.card}>
       <Link to={"/catalog"}>
-        <img className={style.cardImage} src={image} alt={alt} />
+        <img className={style.cardImage} src={image} alt={alt} onClick={handleImageClick} />
       </Link>
       <figcaption className={style.cardInfo}>
         <h3 className={style.cardTitle}>{title}</h3>
@@ -27,6 +41,9 @@ const CatalogCard = (props: ICatalogCardProps) => {
           Получить консультацию
         </button>
       </figcaption>
+      <Modal title={"Название товара"} isOpen={isModalOpen} onClose={handleModalClose}>
+        <p>Текст карточки</p>
+      </Modal>
     </figure>
   );
 };
