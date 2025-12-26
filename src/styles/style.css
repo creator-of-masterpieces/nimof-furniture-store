@@ -1,3 +1,4 @@
+/*Переменные*/
 :root {
   /* Цветовая палитра */
   --color-primary: #1a1a1a;
@@ -46,7 +47,7 @@
   --transition-color: color 0.3s ease;
 }
 
-/* CSS Reset */
+/* Сброс CSS */
 *,
 *::before,
 *::after {
@@ -130,4 +131,27 @@ address {
 /* Скрытые элементы */
 [hidden] {
   display: none !important;
+}
+
+/*------- ГЛОБАЛЬНЫЕ СТИЛИ -------*/
+body {
+  scrollbar-gutter: stable;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+  padding-inline-end: 17px;
+}
+
+/*Модальные окна*/
+#modal-root {
+  display: none;
+}
+
+#modal-root.active {
+  position: fixed;
+  display: block;
+  inset: 0;
+  z-index: 1000;
+  background: transparent;
 }
