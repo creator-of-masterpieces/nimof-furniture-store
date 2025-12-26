@@ -4,3 +4,13 @@
     line-height: var(--line-height-base);
     color: var(--color-primary);
 }
+
+.section {
+    max-width: 1700px;
+    margin-inline: auto;
+    padding: 100px 10px;
+}
+
+.filtersGalleryWrap {
+    display: flex;
+}
