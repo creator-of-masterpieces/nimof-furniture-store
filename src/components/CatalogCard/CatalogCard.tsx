@@ -21,7 +21,6 @@ const CatalogCard = (props: ICatalogCardProps) => {
 
   const handleImageClick = () => {
     setIsModalOpen(true);
-    alert(`Открылась окно с информацией о товаре! isModalOpen: ${isModalOpen}`);
   };
 
   const handleModalClose = () => {

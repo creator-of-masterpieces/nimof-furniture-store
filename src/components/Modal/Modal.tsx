@@ -13,15 +13,20 @@ const Modal = (props: IModalProps) => {
 
   // Ссылка на модальное окно
   const dialogRef = useRef<HTMLDialogElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const modalRoot = document.getElementById("modal-root")!;
 
   // Главное управление открытием / закрытием
   useEffect(() => {
+    if (modalRoot) {
+      modalRoot.classList.toggle("active", isOpen);
+    }
     if (isOpen && dialogRef.current) {
       dialogRef.current.showModal();
     } else if (dialogRef.current) {
       dialogRef.current.close();
     }
-  }, [isOpen]);
+  }, [isOpen, modalRoot]);
 
   useEffect(() => {
     // Закрытие по событию close
@@ -52,7 +57,7 @@ const Modal = (props: IModalProps) => {
         </button>
       </div>
     </dialog>,
-    document.body,
+    modalRoot,
   );
 };
 
