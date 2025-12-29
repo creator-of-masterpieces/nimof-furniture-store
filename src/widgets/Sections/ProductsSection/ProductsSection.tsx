@@ -10,8 +10,7 @@ const ProductsSection = () => {
         {products.map((product) => (
           <li key={product.id}>
             <CatalogCard
-              image={product.image}
-              alt={product.alt}
+              images={product.images}
               title={product.title}
               description={product.description}
               price={product.price}
