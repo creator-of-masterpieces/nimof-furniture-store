@@ -1,7 +1,7 @@
 import style from "./catalogCard.module.css";
-import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal.tsx";
 import { useState } from "react";
+import ProductPreview from "../ProductPreview/ProductPreview.tsx";
 
 interface ICatalogCardProps {
   image: string;
@@ -29,9 +29,8 @@ const CatalogCard = (props: ICatalogCardProps) => {
 
   return (
     <figure className={style.card}>
-      <Link to={"/catalog"}>
-        <img className={style.cardImage} src={image} alt={alt} onClick={handleImageClick} />
-      </Link>
+      <img className={style.cardImage} src={image} alt={alt} onClick={handleImageClick} />
+
       <figcaption className={style.cardInfo}>
         <h3 className={style.cardTitle}>{title}</h3>
         <span className={style.cardPrice}>{price}</span>
@@ -41,7 +40,7 @@ const CatalogCard = (props: ICatalogCardProps) => {
         </button>
       </figcaption>
       <Modal title={"Название товара"} isOpen={isModalOpen} onClose={handleModalClose}>
-        <p>Текст карточки</p>
+        <ProductPreview />
       </Modal>
     </figure>
   );

@@ -30,9 +30,7 @@ const CatalogPage = () => {
 
         <div className={clsx(style.filtersGalleryWrap, style.section)}>
           {/* Секция фильтров */}
-          <aside>
-            <TestSwiper />
-          </aside>
+          <aside>Секция фильтров</aside>
           {/* Секция карточек */}
           <ProductsSection />
         </div>

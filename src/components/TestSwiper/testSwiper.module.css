@@ -1,0 +1,94 @@
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Обёртка слайдов — не фиксируем высоту! */
+.slider .swiper-wrapper {
+    height: auto !important;
+}
+
+.slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;           /* Высота под контент */
+    padding: 5px;
+}
+
+/* Изображения внутри слайдов */
+.slider .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;     /* Ограничиваем максимальную высоту */
+    object-fit: cover;    /* Заполняем слайд без искажений */
+    border-radius: 8px;  /* Скругление углов */
+    display: block;
+}
+
+/*Настройка навигации (стрелки)*/
+.slider .swiper-button-prev,
+.slider .swiper-button-next {
+    color: #4a90e2;        /* Цвет стрелок */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.slider .swiper-button-prev:hover,
+.slider .swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* Позиция стрелок */
+.slider .swiper-button-prev {
+    left: 10px;
+}
+
+.slider .swiper-button-next {
+    right: 10px;
+}
+
+/*Стилизация пагинации (точки)*/
+.slider .swiper-pagination {
+    bottom: 10px !important;  /* Позиция снизу */
+}
+
+.slider .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    opacity: 0.8;
+}
+
+.slider .swiper-pagination-bullet-active {
+    background-color: #4a90e2; /* Активный слайд */
+    transform: scale(1.2);   /* Увеличение при активации */
+}
+
+@media (max-width: 768px) {
+    .slider {
+        padding: 0 5px;
+    }
+
+    .slider .swiper-slide img {
+        max-height: 400px;    /* Уменьшаем высоту на мобильных */
+    }
+
+    /* Скрываем стрелки на маленьких экранах */
+    .slider .swiper-button-prev,
+    .slider .swiper-button-next {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider .swiper-pagination {
+        bottom: 5px !important;
+    }
+
+    .slider .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+    }
+}
