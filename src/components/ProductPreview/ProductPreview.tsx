@@ -1,26 +1,31 @@
 import style from "./productPreview.module.css";
 import TestSwiper from "../TestSwiper/TestSwiper.tsx";
 import { Separator } from "../../shared/Separator/Separator.tsx";
+import type { IImage } from "../../data/products.ts";
 
-const ProductPreview = () => {
+interface IProductPreviewProps {
+  images: IImage[];
+  title: string;
+  description: string;
+  price: string;
+}
+
+const ProductPreview = (props: IProductPreviewProps) => {
+  const { images, title, description, price } = props;
   return (
     <figure className={style.productPreview}>
       <div className={style.sliderContainer}>
-        <TestSwiper />
+        <TestSwiper images={images} />
       </div>
 
       <figcaption className={style.productInfo}>
         <div>
-          <h3 className={style.productTitle}>Название товара</h3>
+          <h3 className={style.productTitle}>{title}</h3>
           <Separator className={style.separator} />
         </div>
 
         <div>
-          <p className={style.productDescription}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse
-            expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde
-            veniam! Illo, minus.
-          </p>
+          <p className={style.productDescription}>{description}</p>
           <Separator className={style.separator} />
         </div>
 
@@ -35,7 +40,7 @@ const ProductPreview = () => {
         <div>
           <div className={style.productInner}>
             <h4>Цена</h4>
-            <span>30 000 руб.</span>
+            <span>{price}</span>
           </div>
           <Separator className={style.separator} />
         </div>
