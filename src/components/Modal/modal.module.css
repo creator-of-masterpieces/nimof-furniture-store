@@ -4,11 +4,11 @@
     transform: translate(-50%, -50%);
     max-inline-size: 95vw;
     max-block-size: 95vh;
-    width: min(90vw, 1000px);
+    inline-size: min(90vw, 1400px);
+    block-size: 640px;
     border-radius: 12px;
     border: 1px solid #e0e0e0;
     background: #fff;
-
 }
 
 .modal[open] {
@@ -21,7 +21,7 @@
 }
 
 .modalContent {
-    padding: 40px;
+    padding: 30px;
 
 }
 
@@ -31,12 +31,22 @@
 
 .closeButton {
     position: absolute;
-    top: 0;
-    right: 10px;
+    top: -6px;
+    right: 5px;
     font-size: 40px;
     font-weight: 700;
     color: #c08a5a;
     cursor: pointer;
+    transition: color .2s ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+    color: #e2ae7f;
+}
+
+.closeButton:active {
+    color: #946a40;
 }
 
 @media (max-width: 768px) {

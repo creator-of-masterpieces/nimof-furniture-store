@@ -18,6 +18,7 @@
     inline-size: 300px;
     block-size: 300px;
     transition: scale .2s;
+    cursor: pointer;
 }
 
 .cardImage:hover,
