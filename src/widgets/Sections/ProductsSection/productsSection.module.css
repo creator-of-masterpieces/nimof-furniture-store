@@ -1,6 +1,5 @@
 .cardsSection {
     max-width: 1280px;
-    margin-inline: auto;
     padding: var(--section-padding-top) 10px;
     display: flex;
     flex-direction: column;
