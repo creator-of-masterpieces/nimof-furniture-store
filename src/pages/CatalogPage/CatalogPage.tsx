@@ -6,8 +6,14 @@ import { Footer } from "../../widgets/Footer/Footer.tsx";
 import ProductsSection from "../../widgets/Sections/ProductsSection/ProductsSection.tsx";
 import clsx from "clsx";
 import Filters from "../../components/Filters/Filters.tsx";
+import { useState } from "react";
+import type { TCategory } from "../../types.ts";
+import { categories, products } from "../../data/products.ts";
 
 const CatalogPage = () => {
+  // Состояние для выбранных категорий (передаётся в Filters)
+  const [selectedCategories, setSelectedCategories] = useState<TCategory[]>([]);
+
   return (
     <div className={style.pageContainer}>
       <Header />
@@ -31,10 +37,14 @@ const CatalogPage = () => {
         <div className={clsx(style.filtersGalleryWrap, style.section)}>
           {/* Секция фильтров */}
           <aside>
-            <Filters />
+            <Filters
+              selectedCategories={selectedCategories}
+              setSelectedCategories={setSelectedCategories}
+              categories={categories}
+            />
           </aside>
           {/* Секция карточек */}
-          <ProductsSection />
+          <ProductsSection products={products} selectedCategories={selectedCategories} />
         </div>
       </main>
       <Footer />

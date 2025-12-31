@@ -2,7 +2,7 @@ import style from "./catalogCard.module.css";
 import Modal from "../Modal/Modal.tsx";
 import { useState } from "react";
 import ProductPreview from "../ProductPreview/ProductPreview.tsx";
-import type { IImage } from "../../data/products.ts";
+import type { IImage } from "../../types.ts";
 
 interface ICatalogCardProps {
   images: IImage[];

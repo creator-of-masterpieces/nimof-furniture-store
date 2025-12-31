@@ -1,7 +1,7 @@
 import style from "./productPreview.module.css";
 import TestSwiper from "../TestSwiper/TestSwiper.tsx";
 import { Separator } from "../../shared/Separator/Separator.tsx";
-import type { IImage } from "../../data/products.ts";
+import type { IImage } from "../../types.ts";
 
 interface IProductPreviewProps {
   images: IImage[];

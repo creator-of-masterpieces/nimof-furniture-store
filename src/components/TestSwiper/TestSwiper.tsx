@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import style from "./testSwiper.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import type { IImage } from "../../data/products.ts";
+import type { IImage } from "../../types.ts";
 
 interface ITestSwiperProps {
   images: IImage[];
@@ -36,15 +36,6 @@ const TestSwiper = (props: ITestSwiperProps) => {
           <img src={image.src} alt={image.alt} />
         </SwiperSlide>
       ))}
-      {/*<SwiperSlide>*/}
-      {/*  <img src="/src/assets/images/living-room.jpg" alt="" />*/}
-      {/*</SwiperSlide>*/}
-      {/*<SwiperSlide>*/}
-      {/*  <img src="/src/assets/images/kitchen.webp" alt="" />*/}
-      {/*</SwiperSlide>*/}
-      {/*<SwiperSlide>*/}
-      {/*  <img src="/src/assets/images/living-room.jpg" alt="" />*/}
-      {/*</SwiperSlide>*/}
     </Swiper>
   );
 };

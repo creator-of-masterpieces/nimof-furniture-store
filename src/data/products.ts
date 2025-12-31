@@ -1,101 +1,486 @@
 import { v4 as uuidv4 } from "uuid";
+import type { IProduct, TCategory } from "../types.ts";
 
-export interface IImage {
-  src: string;
-  alt: string;
-}
-
-interface IProducts {
-  id: string;
-  images: IImage[];
-  title: string;
-  description: string;
-  price: string;
-}
-
-export const products: IProducts[] = [
+export const categories: TCategory[] = ["Гостиная", "Кухня", "Ванная", "Санузел", "Шкафы"];
+export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv1.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv1.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Современный гарнитур с глянцевыми фасадами и светодиодной подсветкой. Идеален для интерьеров в стиле лофт и минимализм.",
   },
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv2.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv2.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Универсальный комплект с вместительными шкафами и открытыми полками. Практичное решение для повседневной жизни.",
   },
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv1.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv1.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Элитная мебель из массива дерева с ручной резьбой. Фурнитура премиум‑класса и индивидуальная подгонка деталей.",
   },
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv2.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv2.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Лаконичный комплект в скандинавском стиле: натуральные материалы, светлые тона и максимум функциональности.",
   },
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv1.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv1.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Традиционный гарнитур с резными фасадами и витражными вставками. Элегантность и статусность в каждой детали.",
   },
   {
     id: uuidv4(),
     images: [
       {
-        src: "/src/assets/images/living-room.jpg",
+        src: "/src/assets/images/lv2.jpg",
         alt: "Фото гостиной первое",
       },
-      { src: "/src/assets/images/kitchen.webp", alt: "Фото гостиной второе" },
+      { src: "/src/assets/images/lv2.jpg", alt: "Фото гостиной второе" },
     ],
+    category: "Гостиная",
     title: "Гостиная Welcome",
     price: "39 990₽",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequatur esse expedita magni quae quaerat quas recusandae voluptatem. Accusamus eligendi est nemo obcaecati quam unde veniam! Illo, minus.",
+      "Компактный набор для небольших гостиных: оптимизированное хранение и визуальная лёгкость конструкции.",
+  },
+  // Кухня (6 товаров)
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 1, фото 1" },
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 1, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Стандарт",
+    price: "42 100₽",
+    description: "Базовая кухня с эргономичной планировкой. Вместительные ящики и удобные столешницы.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 2, фото 1" },
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 2, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Про",
+    price: "59 800₽",
+    description: "Профессиональная кухня для гурманов. Усиленные конструкции и премиальные покрытия.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 3, фото 1" },
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 3, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Мини",
+    price: "27 400₽",
+    description: "Компактная кухня для малогабаритных помещений. Максимум функциональности при минимуме места.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 4, фото 1" },
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 4, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Лофт",
+    price: "51 600₽",
+    description: "Кухня в индустриальном стиле с металлическими элементами. Для современных интерьеров.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 5, фото 1" },
+      { src: "/src/assets/images/kc1.jpg", alt: "Кухня Модель 5, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Классика",
+    price: "48 900₽",
+    description: "Традиционная кухня с резными фасадами. Элегантность и функциональность.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 6, фото 1" },
+      { src: "/src/assets/images/kc2.jpg", alt: "Кухня Модель 6, фото 2" },
+    ],
+    category: "Кухня",
+    title: "Кухня Смарт",
+    price: "63 200₽",
+    description: "Умная кухня с встроенной техникой и системами хранения. Максимум технологий.",
+  },
+  // Ванная (6 товаров)
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Комфорт Плюс», фото 1",
+      },
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Комфорт Плюс», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Комфорт Плюс»",
+    price: "28 500₽",
+    description:
+      "Комплект для ванной комнаты с вместительными шкафами и зеркалами. Практичное решение с продуманной эргономикой.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Люкс», фото 1",
+      },
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Люкс», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Люкс»",
+    price: "47 300₽",
+    description:
+      "Премиальный комплект с мраморной столешницей и фурнитурой золотого цвета. Для ценителей роскошного дизайна.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Мини», фото 1",
+      },
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Мини», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Мини»",
+    price: "19 800₽",
+    description: "Компактный набор для малогабаритных ванных. Оптимизированное хранение при скромных габаритах.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Эко», фото 1",
+      },
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Эко», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Эко»",
+    price: "32 400₽",
+    description:
+      "Набор из экологичных материалов: массив дерева и натуральное покрытие. Для здорового микроклимата в доме.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Модерн», фото 1",
+      },
+      {
+        src: "/src/assets/images/br1.jpg",
+        alt: "Ванная «Модерн», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Модерн»",
+    price: "38 700₽",
+    description: "Современный дизайн с гладкими фасадами и скрытой системой хранения. Минимализм и функциональность.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Классика», фото 1",
+      },
+      {
+        src: "/src/assets/images/br2.jpg",
+        alt: "Ванная «Классика», фото 2",
+      },
+    ],
+    category: "Ванная",
+    title: "Ванная «Классика»",
+    price: "41 200₽",
+    description: "Традиционный комплект с резными фасадами и хромированной фурнитурой. Элегантность в каждом элементе.",
+  },
+  // Санузел (6 товаров)
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Стандарт», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Стандарт», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Стандарт»",
+    price: "18 500₽",
+    description:
+      "Базовый комплект для санузла: компактная тумба под раковину и навесной шкаф. Практичное решение для типовых помещений.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Премиум», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Премиум», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Премиум»",
+    price: "34 900₽",
+    description:
+      "Комплект премиум‑класса с зеркальным шкафом и подсветкой. Влагостойкие материалы и современная фурнитура.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Мини», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Мини», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Мини»",
+    price: "14 200₽",
+    description:
+      "Ультракомпактный набор для маленьких санузлов. Минималистичный дизайн и максимум функциональности при малой площади.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Лофт», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Лофт», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Лофт»",
+    price: "29 700₽",
+    description:
+      "Дизайн в стиле лофт: металлические акценты, фактурные поверхности. Для современных интерьеров с индустриальными элементами.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Эко», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl1.jpg",
+        alt: "Санузел «Эко», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Эко»",
+    price: "26 300₽",
+    description:
+      "Экологичные материалы: бамбук и переработанное стекло. Безопасное решение для здоровья и окружающей среды.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Современный», фото 1",
+      },
+      {
+        src: "/src/assets/images/tl2.jpg",
+        alt: "Санузел «Современный», фото 2",
+      },
+    ],
+    category: "Санузел",
+    title: "Санузел «Современный»",
+    price: "31 800₽",
+    description:
+      "Лаконичный дизайн с гладкими фасадами и скрытыми ручками. Умное хранение и эргономичная организация пространства.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф «Классика», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф «Классика», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф «Классика»",
+    price: "42 500₽",
+    description:
+      "Традиционный шкаф с резными фасадами и зеркальными дверцами. Вместительное хранение в элегантном исполнении.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Комфорт», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Комфорт», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф «Комфорт»",
+    price: "36 800₽",
+    description:
+      "Универсальный шкаф с комбинированными секциями: полки, штанги и выдвижные ящики. Оптимальное решение для повседневной эксплуатации.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф-купе «Стиль», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф-купе «Стиль», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф-купе «Стиль»",
+    price: "54 200₽",
+    description:
+      "Современный шкаф-купе с раздвижными дверями и зеркальными панелями. Экономит пространство и визуально расширяет комнату.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Мини», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Мини», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф «Мини»",
+    price: "24 900₽",
+    description:
+      "Компактный шкаф для небольших помещений. Функциональные секции при скромных габаритах — идеально для малогабаритных квартир.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф «Премиум», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr1.jpg",
+        alt: "Шкаф «Премиум», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф «Премиум»",
+    price: "68 700₽",
+    description:
+      "Элитный шкаф из массива дуба с ручной отделкой. Фурнитура премиум‑класса и индивидуальная подгонка деталей.",
+  },
+  {
+    id: uuidv4(),
+    images: [
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Модерн», фото 1",
+      },
+      {
+        src: "/src/assets/images/wr2.jpg",
+        alt: "Шкаф «Модерн», фото 2",
+      },
+    ],
+    category: "Шкафы",
+    title: "Шкаф «Модерн»",
+    price: "49 300₽",
+    description:
+      "Лаконичный дизайн с гладкими фасадами и скрытой фурнитурой. Минималистичное решение для современных интерьеров.",
   },
 ];
