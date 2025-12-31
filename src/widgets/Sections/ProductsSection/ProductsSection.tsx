@@ -8,6 +8,7 @@ interface IProductsSectionProps {
   products: IProduct[];
   selectedCategories: TCategory[];
 }
+
 const ProductsSection = (props: IProductsSectionProps) => {
   const { products, selectedCategories } = props;
 
