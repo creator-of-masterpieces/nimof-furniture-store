@@ -30,7 +30,6 @@ const CatalogCard = (props: ICatalogCardProps) => {
   return (
     <figure className={style.card}>
       <img className={style.cardImage} src={images[0].src} alt={images[0].alt} onClick={handleImageClick} />
-
       <figcaption className={style.cardInfo}>
         <h3 className={style.cardTitle}>{title}</h3>
         <span className={style.cardPrice}>{price}</span>

@@ -1,9 +1,12 @@
 .card {
+    display: flex;
+    flex-direction: column;
     inline-size: 320px;
+    block-size: 100%;
     padding: 16px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #F9F9F9;
+    background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform .3s, box-shadow .3s;
 }
@@ -23,25 +26,42 @@
 
 .cardImage:hover,
 .cardImage:focus-visible {
-    scale: 1.01;
+    scale: 1.02;
 }
 
 .cardInfo {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    gap: 12px; /* Добавил */
+    flex-grow: 1;
     padding: 15px 10px;
 }
 
 .cardTitle {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
     color: #222222;
 }
 
 .cardPrice {
-    color: #212121;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4a90e2;
 }
 
 .cardDescription {
     font-size: 14px;
-    color: #424242;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+    max-inline-size: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .cardButton {
@@ -51,21 +71,27 @@
     padding: 12px 0;
     border: none;
     border-radius: 8px;
-    background-color: var(--color-accent);
+    background-color: var(--color-accent, #d4a373);
     color: #FFFFFF; /* Белый текст */
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition:
+            background-color 0.3s,
+            transform 0.2s,
+            box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cardButton:hover,
 .cardButton:focus-visible {
-    background-color: var(--color-button-primary-hover);
+    background-color: var(--color-button-primary-hover, #c08a5a);
     transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cardButton:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
