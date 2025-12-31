@@ -4,13 +4,17 @@ interface ICategoryCard {
   title: string;
   image: string;
   to: string;
+  categoryKey: string;
 }
 
 const CategoryCard = (props: ICategoryCard) => {
-  const { title, image, to } = props;
+  const { title, image, to, categoryKey } = props;
+
+  // encodeURIComponent — защищает от спецсимволов в названии категории.
+  const toWithFilter = `${to}?category=${encodeURIComponent(categoryKey)}`;
   return (
     <Link
-      to={to}
+      to={toWithFilter}
       className={style.card}
       style={{
         backgroundImage: `url(${image})`,

@@ -15,19 +15,34 @@ const CategoryCards = (props: ICategoryCardsProps) => {
         <h2 className={style.categoryTitle}>{title}</h2>
         <ul className={style.categoryList}>
           <li>
-            <CategoryCard to={"/catalog"} title={"Гостиная"} image={"/src/assets/images/kitchen.webp"} />
+            <CategoryCard
+              to={"/catalog"}
+              categoryKey={"Гостиная"}
+              title={"Гостиная"}
+              image={"/src/assets/images/lv1.jpg"}
+            />
           </li>
           <li>
-            <CategoryCard to={"/catalog"} title={"Кухня"} image={"/src/assets/images/kitchen.webp"} />
+            <CategoryCard to={"/catalog"} categoryKey={"Кухня"} title={"Кухня"} image={"/src/assets/images/kc1.jpg"} />
           </li>
           <li>
-            <CategoryCard to={"/catalog"} title={"Ванная комната"} image={"/src/assets/images/kitchen.webp"} />
+            <CategoryCard
+              to={"/catalog"}
+              categoryKey={"Ванная"}
+              title={"Ванная комната"}
+              image={"/src/assets/images/br1.jpg"}
+            />
           </li>
           <li>
-            <CategoryCard to={"/catalog"} title={"Санузел"} image={"/src/assets/images/kitchen.webp"} />
+            <CategoryCard
+              to={"/catalog"}
+              categoryKey={"Санузел"}
+              title={"Санузел"}
+              image={"/src/assets/images/tl1.jpg"}
+            />
           </li>
           <li>
-            <CategoryCard to={"/catalog"} title={"Шкафы"} image={"/src/assets/images/kitchen.webp"} />
+            <CategoryCard to={"/catalog"} categoryKey={"Шкафы"} title={"Шкафы"} image={"/src/assets/images/wr1.jpg"} />
           </li>
         </ul>
       </div>
