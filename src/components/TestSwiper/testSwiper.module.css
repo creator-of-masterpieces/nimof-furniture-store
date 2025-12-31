@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 0 10px;
 }
-
+.sliderContainer {
+    max-inline-size: 800px;
+}
 /* Обёртка слайдов — не фиксируем высоту! */
 .slider .swiper-wrapper {
     height: auto !important;

@@ -21,8 +21,8 @@
 }
 
 .modalContent {
+    block-size: 100%;
     padding: 30px;
-
 }
 
 .modalTitle {

@@ -1,7 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    inline-size: 320px;
+    inline-size: 350px;
     block-size: 100%;
     padding: 16px;
     border-radius: 20px;
@@ -18,7 +18,7 @@
 }
 
 .cardImage {
-    inline-size: 300px;
+    inline-size: 100%;
     block-size: 300px;
     transition: scale .2s;
     cursor: pointer;

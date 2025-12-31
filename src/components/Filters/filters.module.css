@@ -1,9 +1,10 @@
 .filters {
     position: sticky;
     top: 217px;
-    align-self: flex-start;
+    min-inline-size: 240px;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     row-gap: 10px;
     padding: 30px;
     border-radius: var(--border-radius-md);
