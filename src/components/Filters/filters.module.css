@@ -54,6 +54,7 @@
 }
 
 .checkmark {
+    position: relative;
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -69,4 +70,25 @@
     border-color: var(--color-accent);
 }
 
+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--color-accent);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.input:checked + .checkmark {
+    border-color: var(--color-accent);
+}
+
+.input:checked + .checkmark::after {
+    opacity: 1;
+}
 
