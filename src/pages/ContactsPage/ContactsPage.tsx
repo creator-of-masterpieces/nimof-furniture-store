@@ -8,10 +8,12 @@ import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import clsx from "clsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 
 const ContactsPage = () => {
   return (
     <div className={style.pageContainer}>
+      <ScrollToTop />
       <Header />
       <main>
         {/*Секция Call To Action */}

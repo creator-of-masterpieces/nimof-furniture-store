@@ -6,10 +6,12 @@ import CategoryCards from "../../widgets/CategoryCards/CategoryCards.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
 import FeaturesSection from "../../widgets/Sections/FeaturesSection/FeaturesSection.tsx";
 import { Map } from "../../components/Map/Map.tsx";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 
 const MainPage = () => {
   return (
     <div className={style.pageContainer}>
+      <ScrollToTop />
       <Header />
       <main>
         <CallToAction

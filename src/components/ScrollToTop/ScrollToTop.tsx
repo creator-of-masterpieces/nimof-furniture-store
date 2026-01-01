@@ -2,7 +2,7 @@ import { useLocation, useNavigationType } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 // Компонент скроллит страницу вверх при смене роута
-const ScrollToTop = ({ targetRef }: { targetRef: React.RefObject<HTMLElement | null> }) => {
+const ScrollToTop = ({ targetRef }: { targetRef?: React.RefObject<HTMLElement | null> }) => {
   const { pathname, search } = useLocation();
   const navigationType = useNavigationType(); // 'POP' | 'PUSH' | 'REPLACE'
 
@@ -23,7 +23,7 @@ const ScrollToTop = ({ targetRef }: { targetRef: React.RefObject<HTMLElement | n
     prevSearchRef.current = search;
 
     // 1. Скролл к секции товаров при наличии category= в URL
-    if (hasCategoryParam && targetRef.current) {
+    if (hasCategoryParam && targetRef?.current) {
       targetRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
