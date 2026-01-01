@@ -3,4 +3,5 @@
     font-size: var(--font-size-m);
     line-height: var(--line-height-base);
     color: var(--color-primary);
+    background-color: #f9f9f9;
 }
