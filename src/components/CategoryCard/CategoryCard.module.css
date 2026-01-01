@@ -7,7 +7,7 @@
     overflow: hidden;
     border-radius: 8px;
     min-height: 300px;
-    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.5) 20%, transparent 30%), url("/src/assets/images/kitchen.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/living-room.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
