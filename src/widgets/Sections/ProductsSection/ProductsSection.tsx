@@ -3,19 +3,19 @@ import style from "./productsSection.module.css";
 import CatalogCard from "../../../components/CatalogCard/CatalogCard.tsx";
 import type { IProduct, TCategory } from "../../../types.ts";
 import useFilteredProducts from "../../../hooks/useFilteredProducts.tsx";
+import { forwardRef } from "react";
 
 interface IProductsSectionProps {
   products: IProduct[];
   selectedCategories: TCategory[];
 }
 
-const ProductsSection = (props: IProductsSectionProps) => {
+const ProductsSection = forwardRef<HTMLElement, IProductsSectionProps>((props, ref) => {
   const { products, selectedCategories } = props;
-
   // Отфильтрованный массив товаров
   const filteredProducts = useFilteredProducts(products, selectedCategories);
   return (
-    <section className={style.cardsSection}>
+    <section className={style.cardsSection} ref={ref}>
       <ul className={style.cardsList}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
@@ -34,6 +34,6 @@ const ProductsSection = (props: IProductsSectionProps) => {
       </ul>
     </section>
   );
-};
+});
 
 export default ProductsSection;
