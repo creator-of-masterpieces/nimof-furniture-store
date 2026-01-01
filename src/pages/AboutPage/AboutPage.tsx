@@ -7,12 +7,13 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle.tsx";
 import clsx from "clsx";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaHeadset, FaPenNib, FaWrench, FaTruck } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 
 const AboutPage = () => {
   return (
     <div className={style.pageContainer}>
+      <ScrollToTop />
       <Header />
-
       <main>
         <CallToAction
           title={"Мебель, с которой начинается день"}
@@ -80,7 +81,6 @@ const AboutPage = () => {
           </ul>
         </section>
       </main>
-
       <Footer />
     </div>
   );
