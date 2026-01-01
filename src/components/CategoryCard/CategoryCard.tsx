@@ -17,7 +17,7 @@ const CategoryCard = (props: ICategoryCard) => {
       to={toWithFilter}
       className={style.card}
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(${image})`,
       }}
     >
       <h3 className={style.cardTitle}>{title}</h3>
