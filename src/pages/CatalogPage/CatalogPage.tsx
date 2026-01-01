@@ -1,7 +1,5 @@
 import style from "./catalogPage.module.css";
 import Header from "../../widgets/Header/Header.tsx";
-import LinkButton from "../../components/LinkButton/LinkButton.tsx";
-import CallToAction from "../../widgets/CallToAction/CallToAction.tsx";
 import { Footer } from "../../widgets/Footer/Footer.tsx";
 import ProductsSection from "../../widgets/Sections/ProductsSection/ProductsSection.tsx";
 import clsx from "clsx";
@@ -44,22 +42,6 @@ const CatalogPage = () => {
       <div className={style.pageContainer}>
         <Header />
         <main>
-          {/*  Секция CTA */}
-          <CallToAction
-            title={"Мебель, с которой начинается день"}
-            description={
-              "Откройте для себя элегантную и функциональную мебель, которая идеально впишется в ваш интерьер и подчеркнет ваш стиль."
-            }
-            type={"primary"}
-          >
-            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-              Наши работы
-            </LinkButton>
-            <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
-              Подробнее о бренде
-            </LinkButton>
-          </CallToAction>
-
           <div className={clsx(style.filtersGalleryWrap, style.section)}>
             {/* Секция фильтров */}
             <aside>
