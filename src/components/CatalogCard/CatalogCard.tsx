@@ -38,7 +38,7 @@ const CatalogCard = (props: ICatalogCardProps) => {
           Получить консультацию
         </button>
       </figcaption>
-      <Modal title={"Название товара"} isOpen={isModalOpen} onClose={handleModalClose}>
+      <Modal variant={"Product"} title={"Название товара"} isOpen={isModalOpen} onClose={handleModalClose}>
         <ProductPreview images={images} title={title} description={description} price={price} />
       </Modal>
     </figure>

@@ -1,15 +1,18 @@
 import style from "./modal.module.css";
 import { createPortal } from "react-dom";
 import { useEffect, useRef } from "react";
+import clsx from "clsx";
 
 interface IModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
   title: string;
+  variant?: "Form" | "Product";
 }
+
 const Modal = (props: IModalProps) => {
-  const { isOpen, onClose, children } = props;
+  const { isOpen, onClose, children, variant } = props;
 
   // Ссылка на модальное окно
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -55,7 +58,7 @@ const Modal = (props: IModalProps) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <dialog className={style.modal} ref={dialogRef} onClick={handleClick}>
+    <dialog className={clsx(style.modal, variant && style[`modal${variant}`])} ref={dialogRef} onClick={handleClick}>
       <div className={style.modalContent}>
         {children}
         <button className={style.closeButton} onClick={onClose}>
