@@ -1,12 +1,18 @@
 import { useState } from "react";
 import style from "./contactsForm.module.css";
+
 interface IFormData {
   name: string;
   email: string;
   phone: string;
 }
 
-const ContactsForm = () => {
+interface IContactsFormProps {
+  modalClose?: () => void;
+}
+
+const ContactsForm = (props: IContactsFormProps) => {
+  const { modalClose } = props;
   const [formData, setFormData] = useState<IFormData>({
     name: "",
     email: "",
@@ -25,8 +31,12 @@ const ContactsForm = () => {
   // Обработчик отправки формы
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(`Отправленные данные: ${formData}`);
+    if (modalClose) {
+      modalClose();
+    }
+    alert("Данные формы отправлены");
   };
+
   return (
     <form className={style.contactsForm} onSubmit={submitHandler}>
       <div className={style.formGroup}>
@@ -44,7 +54,7 @@ const ContactsForm = () => {
         <input className={style.formInput} id={"emailId"} name={"email"} type="email" onChange={changeHandler} />
       </div>
 
-      <button className={style.submitButton} type={"submit"}>
+      <button className={style.submitButton} type={"submit"} onSubmit={submitHandler}>
         Отправить
       </button>
     </form>
