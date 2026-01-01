@@ -5,6 +5,7 @@ interface IFormData {
   email: string;
   phone: string;
 }
+
 const ContactsForm = () => {
   const [formData, setFormData] = useState<IFormData>({
     name: "",

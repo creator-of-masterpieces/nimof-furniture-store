@@ -1,11 +1,10 @@
+/* Общие стили */
 .modal {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-inline-size: 95vw;
     max-block-size: 95vh;
-    inline-size: min(90vw, 1400px);
-    block-size: 640px;
     border-radius: 12px;
     border: 1px solid #e0e0e0;
     background: #fff;
@@ -47,6 +46,19 @@
 
 .closeButton:active {
     color: #946a40;
+}
+
+/*Стили для карточек товара (широкий контент) */
+.modalProduct {
+    inline-size: min(90vw, 1400px);
+    block-size: 640px;
+}
+
+/* Стили для форм обратной связи (компактный) */
+.modalForm {
+    inline-size: min(90vw, 500px); /* Уже, чем для товаров */
+    block-size: auto; /* Высота под контент формы */
+    max-block-size: 80vh; /* Ограничение по высоте */
 }
 
 @media (max-width: 768px) {

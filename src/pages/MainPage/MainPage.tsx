@@ -7,8 +7,21 @@ import { Footer } from "../../widgets/Footer/Footer.tsx";
 import FeaturesSection from "../../widgets/Sections/FeaturesSection/FeaturesSection.tsx";
 import { Map } from "../../components/Map/Map.tsx";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
+import { useState } from "react";
+import Modal from "../../components/Modal/Modal.tsx";
+import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
 
 const MainPage = () => {
+  const [isContactsModalOpen, setIsContactsModalOpen] = useState<boolean>(false);
+
+  const handleModalClose = () => {
+    setIsContactsModalOpen(false);
+  };
+
+  const handleContactsButton = () => {
+    setIsContactsModalOpen(true);
+  };
+
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
@@ -40,13 +53,21 @@ const MainPage = () => {
           <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
             Наши работы
           </LinkButton>
-          <LinkButton appearance={"secondary"} type={"button"} onClick={() => alert("Вот тебе консультация!")}>
+          <LinkButton appearance={"secondary"} type={"button"} onClick={handleContactsButton}>
             Получить консультацию
           </LinkButton>
         </CallToAction>
         <Map />
       </main>
       <Footer />
+      <Modal
+        variant={"Form"}
+        isOpen={isContactsModalOpen}
+        title={"Мы ответим на все ваши вопросы"}
+        onClose={handleModalClose}
+      >
+        <ContactsForm />
+      </Modal>
     </div>
   );
 };
