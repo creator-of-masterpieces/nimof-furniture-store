@@ -23,13 +23,28 @@
 }
 
 .main {
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
+    max-inline-size: 1280px;
+    margin: 0 auto;
 }
 
 .navigation {
     max-inline-size: 1280px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: auto;
+}
+@media screen and (max-width: 400px){
+    .top  {
+        font-size: 14px;
+    }
 }

@@ -1,9 +1,17 @@
-import style from "./Header.module.css";
+import style from "./header.module.css";
 import ContactLink from "../../components/ContactLink/ContactLink.tsx";
 import Logo from "../../components/Logo/Logo.tsx";
 import NavigationList from "../../components/NavigationList/NavigationList.tsx";
 
-const Header = () => {
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu.tsx";
+
+interface IHeaderProps {
+  isMobile: boolean;
+}
+
+const Header = (props: IHeaderProps) => {
+  const { isMobile } = props;
+
   return (
     <header className={style.header}>
       <div className={style.top}>
@@ -18,10 +26,17 @@ const Header = () => {
       </div>
 
       <div className={style.main}>
-        <nav className={style.navigation}>
-          <Logo />
-          <NavigationList type={"isHeaderNav"} />
-        </nav>
+        <Logo />
+        {!isMobile && (
+          <nav className={style.navigation}>
+            <NavigationList type={"isHeaderNav"} />
+          </nav>
+        )}
+        {isMobile && (
+          <div className={style.burger}>
+            <BurgerMenu />
+          </div>
+        )}
       </div>
     </header>
   );

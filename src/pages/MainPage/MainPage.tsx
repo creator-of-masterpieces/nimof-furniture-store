@@ -10,9 +10,11 @@ import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 import { useState } from "react";
 import Modal from "../../components/Modal/Modal.tsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const MainPage = () => {
   const [isContactsModalOpen, setIsContactsModalOpen] = useState<boolean>(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const handleModalClose = () => {
     setIsContactsModalOpen(false);
@@ -25,7 +27,7 @@ const MainPage = () => {
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
-      <Header />
+      <Header isMobile={isMobile} />
       <main>
         <CallToAction
           title={"Мебель, с которой начинается день"}

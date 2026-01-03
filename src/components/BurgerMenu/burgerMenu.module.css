@@ -1,0 +1,33 @@
+.burgerIcon {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.burgerRow {
+    inline-size: 50px;
+    block-size: 5px;
+    border-radius: 2px;
+    background-color: var(--color-bg-secondary);
+}
+
+.burgerModal {
+    position: fixed;
+    top: 60px; /* Высота шапки */
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    padding: 20px;
+    margin: 0;
+    border: none;
+}
+
+.burgerModal[open] {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
