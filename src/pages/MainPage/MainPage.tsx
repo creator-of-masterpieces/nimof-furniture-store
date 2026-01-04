@@ -62,12 +62,14 @@ const MainPage = () => {
           description={"Мы предлагаем широкий выбор качественной мебели и сантехники для вашего дома"}
           type={"secondary"}
         >
-          <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-            Наши работы
-          </LinkButton>
-          <LinkButton appearance={"secondary"} type={"button"} onClick={handleContactsButton}>
-            Получить консультацию
-          </LinkButton>
+          <div className={style.buttonsWrap}>
+            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
+              Наши работы
+            </LinkButton>
+            <LinkButton appearance={"secondary"} type={"button"} onClick={handleContactsButton}>
+              Получить консультацию
+            </LinkButton>
+          </div>
         </CallToAction>
 
         {/* Секция с картой */}

@@ -9,7 +9,7 @@
 }
 
 .categoryTitle {
-    font-size: var(--font-size-section-title);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     text-align: center;
 }
@@ -26,5 +26,10 @@
     .categoryList {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
+    }
+
+    .content {
+        padding-block: 30px;
+        row-gap: 20px;
     }
 }

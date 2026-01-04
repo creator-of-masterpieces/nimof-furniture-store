@@ -71,3 +71,9 @@
     scale: 1 1;
     transform-origin: left;
 }
+
+@media screen and (max-width: 768px) {
+    .footerNav .navLink {
+        font-size: 14px;
+    }
+}
