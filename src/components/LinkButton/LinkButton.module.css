@@ -2,7 +2,7 @@
     display: inline-block;
     min-inline-size: 250px;
     padding: 18px 35px;
-    border-radius: 3px ;
+    border-radius: 3px;
     font-size: var(--font-size-m);
     font-weight: 600;
     text-transform: uppercase;
@@ -37,4 +37,12 @@
 .buttonSecondary:focus-visible {
     color: #000;
     background-color: var(--color-button-secondary-hover);
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        display: inline-block;
+        min-inline-size: 250px;
+        padding: 10px 15px;
+    }
 }

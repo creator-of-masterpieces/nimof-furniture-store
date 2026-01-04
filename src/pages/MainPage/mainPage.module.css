@@ -5,3 +5,10 @@
     color: var(--color-primary);
     background-color: #f9f9f9;
 }
+
+.buttonsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}

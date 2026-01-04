@@ -40,12 +40,14 @@ const MainPage = () => {
           }
           type={"primary"}
         >
-          <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-            Наши работы
-          </LinkButton>
-          <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
-            Подробнее о бренде
-          </LinkButton>
+          <div className={style.buttonsWrap}>
+            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
+              Наши работы
+            </LinkButton>
+            <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
+              Подробнее о бренде
+            </LinkButton>
+          </div>
         </CallToAction>
 
         {/* Секция карточек с категориями товаров */}
