@@ -14,7 +14,7 @@
 
 .featuresList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--grid-gap);
     width: 100%;
 }
@@ -29,4 +29,21 @@
     border: 1px solid #e9e8f3;
     border-radius: var(--border-radius-md);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        padding-block: 30px;
+    }
+
+    .featuresTitle {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .featuresList {
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    }
 }

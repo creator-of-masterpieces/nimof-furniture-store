@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { path: "/contacts", label: "Контакты" },
 ] as const;
 
-type TNavigationList = "isHeaderNav" | "isFooterNav";
+type TNavigationList = "isHeaderNav" | "isFooterNav" | "isBurgerNav";
 
 interface INavigationListProps {
   type: TNavigationList;
@@ -33,6 +33,7 @@ const NavigationList = (props: INavigationListProps) => {
         style.navList,
         type === "isHeaderNav" && style.headerNav,
         type === "isFooterNav" && style.footerNav,
+        type === "isBurgerNav" && style.burgerNav,
         className,
       )}
     >

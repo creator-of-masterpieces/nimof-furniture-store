@@ -134,11 +134,11 @@ address {
 }
 
 /*------- ГЛОБАЛЬНЫЕ СТИЛИ -------*/
-body {
+#root {
   scrollbar-gutter: stable;
 }
 
-body:has(dialog[open]) {
+body:has(dialog[open]):not(.mobile) {
   overflow: hidden;
   padding-inline-end: 17px;
 }

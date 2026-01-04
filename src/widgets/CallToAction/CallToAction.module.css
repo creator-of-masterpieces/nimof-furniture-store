@@ -15,7 +15,7 @@
     background-color: var(--color-bg-secondary);
 }
 
-.container {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,8 +39,17 @@
     text-align: center;
 }
 
-.buttonsContainer {
-    display: flex;
-    column-gap: 10px;
+@media screen and (max-width: 768px) {
+    .ctaPrimary {
+        padding: 50px 20px 50px;
+    }
+    .title {
+        font-size: 30px;
+    }
+
+    .ctaSecondary .title {
+        font-size: 30px;;
+    }
+
 }
 

@@ -16,6 +16,8 @@ const Modal = (props: IModalProps) => {
 
   // Ссылка на модальное окно
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  // Контейнер для модальных окон
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const modalRoot = document.getElementById("modal-root")!;
 

@@ -3,7 +3,6 @@
     background-color: var(--color-bg-secondary);
     color: rgba(255, 255, 255, 0.7);
     padding: 100px 0 30px;
-
 }
 
 .wrapper {
@@ -27,9 +26,7 @@
     align-items: flex-start;
     gap: 1.5rem;
     height: 100%;
-    border-radius: var( --border-radius-md);
-
-
+    border-radius: var(--border-radius-md);
 }
 
 .cardTitle {
@@ -80,4 +77,14 @@
 
 .test {
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        font-size: 14px;
+    }
+
+    .cardTitle {
+        font-size: 17px;
+    }
 }

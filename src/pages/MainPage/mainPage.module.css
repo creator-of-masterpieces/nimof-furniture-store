@@ -5,3 +5,15 @@
     color: var(--color-primary);
     background-color: #f9f9f9;
 }
+
+.buttonsWrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .buttonsWrap {
+        flex-direction: column;
+    }
+}

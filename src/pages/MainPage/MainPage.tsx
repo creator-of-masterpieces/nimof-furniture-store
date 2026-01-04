@@ -10,9 +10,11 @@ import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 import { useState } from "react";
 import Modal from "../../components/Modal/Modal.tsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const MainPage = () => {
   const [isContactsModalOpen, setIsContactsModalOpen] = useState<boolean>(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const handleModalClose = () => {
     setIsContactsModalOpen(false);
@@ -25,8 +27,12 @@ const MainPage = () => {
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
-      <Header />
+
+      {/*Шапка*/}
+      <Header isMobile={isMobile} />
+
       <main>
+        {/* Секция призыва к действию основная */}
         <CallToAction
           title={"Мебель, с которой начинается день"}
           description={
@@ -34,32 +40,46 @@ const MainPage = () => {
           }
           type={"primary"}
         >
-          <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-            Наши работы
-          </LinkButton>
-          <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
-            Подробнее о бренде
-          </LinkButton>
+          <div className={style.buttonsWrap}>
+            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
+              Наши работы
+            </LinkButton>
+            <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
+              Подробнее о бренде
+            </LinkButton>
+          </div>
         </CallToAction>
 
+        {/* Секция карточек с категориями товаров */}
         <CategoryCards title={"Наши работы"} />
-        <FeaturesSection></FeaturesSection>
 
+        {/* Секция наши ценности */}
+        <FeaturesSection />
+
+        {/* Секция призыва к действию дополнительная */}
         <CallToAction
           title={"Создайте дом своей мечты с Nimof"}
           description={"Мы предлагаем широкий выбор качественной мебели и сантехники для вашего дома"}
           type={"secondary"}
         >
-          <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-            Наши работы
-          </LinkButton>
-          <LinkButton appearance={"secondary"} type={"button"} onClick={handleContactsButton}>
-            Получить консультацию
-          </LinkButton>
+          <div className={style.buttonsWrap}>
+            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
+              Наши работы
+            </LinkButton>
+            <LinkButton appearance={"secondary"} type={"button"} onClick={handleContactsButton}>
+              Получить консультацию
+            </LinkButton>
+          </div>
         </CallToAction>
+
+        {/* Секция с картой */}
         <Map />
       </main>
+
+      {/* Подвал */}
       <Footer />
+
+      {/* Контактная форма */}
       <Modal
         variant={"Form"}
         isOpen={isContactsModalOpen}
