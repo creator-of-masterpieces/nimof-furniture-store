@@ -23,5 +23,8 @@
 }
 
 @media screen and (max-width: 768px) {
-
+    .categoryList {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
 }

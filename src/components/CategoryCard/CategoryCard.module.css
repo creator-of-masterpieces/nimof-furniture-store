@@ -25,10 +25,17 @@
     color: var(--color-secondary);
     font-size: 28px;
     font-weight: 600;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
     .card {
         min-block-size: 150px;
+    }
+
+    .cardTitle {
+        color: var(--color-secondary);
+        font-size: 23px;
+        font-weight: 600;
     }
 }
