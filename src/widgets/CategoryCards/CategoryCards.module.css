@@ -16,8 +16,12 @@
 
 .categoryList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     width: 100%;
     padding-inline: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
 }

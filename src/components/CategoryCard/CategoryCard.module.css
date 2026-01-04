@@ -6,7 +6,7 @@
     padding: 20px;
     overflow: hidden;
     border-radius: 8px;
-    min-height: 300px;
+    min-block-size: 300px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/living-room.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -25,4 +25,10 @@
     color: var(--color-secondary);
     font-size: 28px;
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        min-block-size: 150px;
+    }
 }
