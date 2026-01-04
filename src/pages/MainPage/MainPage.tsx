@@ -27,8 +27,12 @@ const MainPage = () => {
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
+
+      {/*Шапка*/}
       <Header isMobile={isMobile} />
+
       <main>
+        {/* Секция призыва к действию основная */}
         <CallToAction
           title={"Мебель, с которой начинается день"}
           description={
@@ -44,9 +48,13 @@ const MainPage = () => {
           </LinkButton>
         </CallToAction>
 
+        {/* Секция карточек с категориями товаров */}
         <CategoryCards title={"Наши работы"} />
-        <FeaturesSection></FeaturesSection>
 
+        {/* Секция наши ценности */}
+        <FeaturesSection />
+
+        {/* Секция призыва к действию дополнительная */}
         <CallToAction
           title={"Создайте дом своей мечты с Nimof"}
           description={"Мы предлагаем широкий выбор качественной мебели и сантехники для вашего дома"}
@@ -59,9 +67,15 @@ const MainPage = () => {
             Получить консультацию
           </LinkButton>
         </CallToAction>
+
+        {/* Секция с картой */}
         <Map />
       </main>
+
+      {/* Подвал */}
       <Footer />
+
+      {/* Контактная форма */}
       <Modal
         variant={"Form"}
         isOpen={isContactsModalOpen}
