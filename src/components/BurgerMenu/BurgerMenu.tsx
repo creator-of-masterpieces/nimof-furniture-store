@@ -55,13 +55,13 @@ const BurgerMenu = () => {
   return (
     <>
       <div className={style.burgerIcon} onClick={openBurger}>
-        <div className={style.burgerRow}></div>
-        <div className={style.burgerRow}></div>
-        <div className={style.burgerRow}></div>
+        <div className={style.burgerIconRow}></div>
+        <div className={style.burgerIconRow}></div>
+        <div className={style.burgerIconRow}></div>
       </div>
       {createPortal(
         <dialog className={style.burgerModal} ref={dialogRef} onClick={handleClick}>
-          <NavigationList type={"isHeaderNav"} />
+          <NavigationList type={"isBurgerNav"} />
         </dialog>,
         modalRoot,
       )}

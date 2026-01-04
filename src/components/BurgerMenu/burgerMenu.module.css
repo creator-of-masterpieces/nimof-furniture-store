@@ -4,7 +4,7 @@
     row-gap: 8px;
 }
 
-.burgerRow {
+.burgerIconRow {
     inline-size: 50px;
     block-size: 5px;
     border-radius: 2px;
@@ -12,22 +12,36 @@
 }
 
 .burgerModal {
-    position: fixed;
-    top: 60px; /* Высота шапки */
-    left: 0;
-    right: 0;
-    background: white;
+    block-size: 100%;
+    inline-size: 50%;
+    max-block-size: 100%;
+    margin-left: auto;
     z-index: 1000;
     padding: 20px;
-    margin: 0;
     border: none;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-base);
+    color: var(--color-primary);
+    background-color: #f9f9f9;
 }
 
 .burgerModal[open] {
     animation: fadeIn 0.3s ease;
 }
 
+.burgerModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
