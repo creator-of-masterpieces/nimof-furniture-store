@@ -8,12 +8,14 @@ import clsx from "clsx";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaHeadset, FaPenNib, FaWrench, FaTruck } from "react-icons/fa";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const AboutPage = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
-      <Header />
+      <Header isMobile={isMobile} />
       <main>
         <CallToAction
           title={"Мебель, с которой начинается день"}

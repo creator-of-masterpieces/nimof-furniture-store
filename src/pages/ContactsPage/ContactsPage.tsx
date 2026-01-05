@@ -9,12 +9,14 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import clsx from "clsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const ContactsPage = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
-      <Header />
+      <Header isMobile={isMobile} />
       <main>
         {/*Секция Call To Action */}
         <CallToAction
