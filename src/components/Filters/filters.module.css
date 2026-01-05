@@ -32,7 +32,7 @@
 .list {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    gap: 10px;
 }
 
 .label {
@@ -91,5 +91,13 @@
 
 .input:checked + .checkmark::after {
     opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }
 

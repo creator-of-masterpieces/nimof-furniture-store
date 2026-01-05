@@ -9,9 +9,11 @@ import type { TCategory } from "../../types.ts";
 import { categories, products } from "../../data/products.ts";
 import { useSearchParams } from "react-router-dom";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const CatalogPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const productsSectionRef = useRef<HTMLElement>(null);
 
@@ -40,7 +42,7 @@ const CatalogPage = () => {
     <>
       <ScrollToTop targetRef={productsSectionRef} />
       <div className={style.pageContainer}>
-        <Header />
+        <Header isMobile={isMobile} />
         <main>
           <div className={clsx(style.filtersGalleryWrap, style.section)}>
             {/* Секция фильтров */}

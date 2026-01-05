@@ -12,3 +12,10 @@
     justify-content: center;
     gap: 20px;
 }
+
+@media screen and (max-width: 768px){
+    .cardsSection {
+        padding: var(--section-padding-mobile-top) 10px;
+    }
+
+}
