@@ -16,3 +16,13 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 768px){
+    .section {
+        padding: 20px 10px;
+    }
+
+    .filtersGalleryWrap {
+        flex-direction: column;
+    }
+}
