@@ -17,7 +17,7 @@ const CatalogPage = () => {
 
   const productsSectionRef = useRef<HTMLElement>(null);
 
-  // Вычисляем selectedCategories
+  // Вычисляет выбранные категории товаров
   const selectedCategories = useMemo(() => {
     const categoryFromUrl = searchParams.get("category");
 

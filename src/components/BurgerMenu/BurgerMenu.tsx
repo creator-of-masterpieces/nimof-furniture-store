@@ -2,9 +2,11 @@ import style from "./burgerMenu.module.css";
 import NavigationList from "../NavigationList/NavigationList.tsx";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { useLocation } from "react-router-dom";
 
 const BurgerMenu = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
+  const location = useLocation();
 
   // Ссылка на модальное окно
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -27,6 +29,11 @@ const BurgerMenu = () => {
     setIsBurgerOpen(false);
   };
 
+  // Закрывает модалку при смене роута
+  useEffect(() => {
+    closeBurger();
+  }, [location.pathname]);
+
   // Логика закрытия модального окна
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -46,6 +53,7 @@ const BurgerMenu = () => {
     };
   }, []);
 
+  // Обработчик закрытия модалки при клике вне окна
   const handleClick = (e: React.MouseEvent) => {
     if (e.currentTarget === e.target) {
       closeBurger();
