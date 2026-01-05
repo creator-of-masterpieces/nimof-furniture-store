@@ -24,12 +24,14 @@ const AboutPage = () => {
           }
           type={"primary"}
         >
-          <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
-            Наши работы
-          </LinkButton>
-          <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
-            Подробнее о бренде
-          </LinkButton>
+          <div className={style.buttonsWrap}>
+            <LinkButton type={"link"} appearance={"primary"} to={"/catalog"}>
+              Наши работы
+            </LinkButton>
+            <LinkButton type={"link"} appearance={"secondary"} to={"/about"}>
+              Подробнее о бренде
+            </LinkButton>
+          </div>
         </CallToAction>
 
         <section className={clsx(style.historySection, style.section)}>
@@ -47,12 +49,14 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className={style.historyMedia}>
-            <img
-              src="/src/assets/images/living-room.jpg"
-              alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
-            />
-          </div>
+          {!isMobile && (
+            <div className={style.historyMedia}>
+              <img
+                src="/src/assets/images/living-room.jpg"
+                alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
+              />
+            </div>
+          )}
         </section>
 
         <section className={clsx(style.section, style.workProcessSection)}>
