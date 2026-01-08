@@ -7,7 +7,7 @@
 
 .ctaPrimary {
     padding: 200px 20px 130px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/hero/2400/800');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://loremflickr.com/1280/800/hero');
 }
 
 .ctaSecondary {
@@ -61,7 +61,7 @@
 @media (min-width: 1600px) {
     .ctaPrimary {
         background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://picsum.photos/seed/hero-xm/3800/1200");
+        url("https://loremflickr.com/3800/1200/hero");
     }
 }
 
@@ -69,6 +69,6 @@
     .ctaPrimary {
         padding: 30px 20px;
         background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://picsum.photos/seed/hero-mobile/768/500");
+        url("https://loremflickr.com/768/500/hero");
     }
 }

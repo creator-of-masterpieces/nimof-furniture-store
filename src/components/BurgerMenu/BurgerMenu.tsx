@@ -1,11 +1,11 @@
 import style from "./burgerMenu.module.css";
 import NavigationList from "../NavigationList/NavigationList.tsx";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useLocation } from "react-router-dom";
 
 const BurgerMenu = () => {
-  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
+  // const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
   const location = useLocation();
 
   // Ссылка на модальное окно
@@ -19,14 +19,12 @@ const BurgerMenu = () => {
   const openBurger = () => {
     modalRoot.classList.add("active");
     dialogRef.current?.showModal();
-    setIsBurgerOpen(true);
   };
 
   // Закрывает модалку с бургер меню
   const closeBurger = () => {
     modalRoot.classList.remove("active");
     dialogRef.current?.close();
-    setIsBurgerOpen(false);
   };
 
   // Закрывает модалку при смене роута

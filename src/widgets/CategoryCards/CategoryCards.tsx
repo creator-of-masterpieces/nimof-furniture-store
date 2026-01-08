@@ -19,7 +19,7 @@ const CategoryCards = (props: ICategoryCardsProps) => {
               to={"/catalog"}
               categoryKey={"Гостиная"}
               title={"Гостиная"}
-              image={"https://picsum.photos/seed/living/600/400"}
+              image={"https://loremflickr.com/600/400/living"}
             />
           </li>
           <li className={style.categoryItem}>
@@ -27,7 +27,7 @@ const CategoryCards = (props: ICategoryCardsProps) => {
               to={"/catalog"}
               categoryKey={"Кухня"}
               title={"Кухня"}
-              image={"https://picsum.photos/seed/kitchen/600/400"}
+              image={"https://loremflickr.com/600/400/kitchen"}
             />
           </li>
           <li className={style.categoryItem}>
@@ -35,7 +35,7 @@ const CategoryCards = (props: ICategoryCardsProps) => {
               to={"/catalog"}
               categoryKey={"Ванная"}
               title={"Ванная комната"}
-              image={"https://picsum.photos/seed/bath/600/400"}
+              image={"https://loremflickr.com/600/400/shower"}
             />
           </li>
           <li className={style.categoryItem}>
@@ -43,7 +43,7 @@ const CategoryCards = (props: ICategoryCardsProps) => {
               to={"/catalog"}
               categoryKey={"Санузел"}
               title={"Санузел"}
-              image={"https://picsum.photos/seed/toilet/600/400"}
+              image={"https://loremflickr.com/600/400/bathroom"}
             />
           </li>
           <li className={style.categoryItem}>
@@ -51,7 +51,7 @@ const CategoryCards = (props: ICategoryCardsProps) => {
               to={"/catalog"}
               categoryKey={"Шкафы"}
               title={"Шкафы"}
-              image={"https://picsum.photos/seed/wardrobe/600/400"}
+              image={"https://loremflickr.com/600/400/wardrobe"}
             />
           </li>
         </ul>
