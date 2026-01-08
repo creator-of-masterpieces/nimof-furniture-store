@@ -8,8 +8,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living1/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living2/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Welcome",
@@ -20,8 +20,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living3/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living4/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/livin", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Modern",
@@ -32,8 +32,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living5/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living6/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Luxury",
@@ -44,8 +44,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living7/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living8/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Minimal",
@@ -56,8 +56,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living9/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living10/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Classic",
@@ -68,8 +68,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/living11/800/400", alt: "Фото гостиной первое" },
-      { src: "https://picsum.photos/seed/living12/800/400", alt: "Фото гостиной второе" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной первое" },
+      { src: "https://loremflickr.com/800/400/living", alt: "Фото гостиной второе" },
     ],
     category: "Гостиная",
     title: "Гостиная Compact",
@@ -82,8 +82,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen1/800/400", alt: "Кухня Модель 1, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen2/800/400", alt: "Кухня Модель 1, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 1, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 1, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Стандарт",
@@ -93,8 +93,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen3/800/400", alt: "Кухня Модель 2, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen4/800/400", alt: "Кухня Модель 2, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 2, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 2, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Про",
@@ -104,8 +104,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen5/800/400", alt: "Кухня Модель 3, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen6/800/400", alt: "Кухня Модель 3, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 3, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 3, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Мини",
@@ -115,8 +115,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen7/800/400", alt: "Кухня Модель 4, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen8/800/400", alt: "Кухня Модель 4, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 4, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 4, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Лофт",
@@ -126,8 +126,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen9/800/400", alt: "Кухня Модель 5, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen10/800/400", alt: "Кухня Модель 5, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 5, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 5, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Классика",
@@ -137,8 +137,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/kitchen11/800/400", alt: "Кухня Модель 6, фото 1" },
-      { src: "https://picsum.photos/seed/kitchen12/800/400", alt: "Кухня Модель 6, фото 2" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 6, фото 1" },
+      { src: "https://loremflickr.com/800/400/kitchen", alt: "Кухня Модель 6, фото 2" },
     ],
     category: "Кухня",
     title: "Кухня Смарт",
@@ -150,8 +150,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath1/800/400", alt: "Ванная «Комфорт Плюс», фото 1" },
-      { src: "https://picsum.photos/seed/bath2/800/400", alt: "Ванная «Комфорт Плюс», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Комфорт Плюс», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Комфорт Плюс», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Комфорт Плюс»",
@@ -162,8 +162,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath3/800/400", alt: "Ванная «Люкс», фото 1" },
-      { src: "https://picsum.photos/seed/bath4/800/400", alt: "Ванная «Люкс», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Люкс», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Люкс», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Люкс»",
@@ -174,8 +174,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath5/800/400", alt: "Ванная «Мини», фото 1" },
-      { src: "https://picsum.photos/seed/bath6/800/400", alt: "Ванная «Мини», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Мини», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Мини», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Мини»",
@@ -185,8 +185,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath7/800/400", alt: "Ванная «Эко», фото 1" },
-      { src: "https://picsum.photos/seed/bath8/800/400", alt: "Ванная «Эко», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Эко», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Эко», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Эко»",
@@ -197,8 +197,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath9/800/400", alt: "Ванная «Модерн», фото 1" },
-      { src: "https://picsum.photos/seed/bath10/800/400", alt: "Ванная «Модерн», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Модерн», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Модерн», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Модерн»",
@@ -208,8 +208,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/bath9/800/400", alt: "Ванная «Модерн», фото 1" },
-      { src: "https://picsum.photos/seed/bath10/800/400", alt: "Ванная «Модерн», фото 2" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Модерн», фото 1" },
+      { src: "https://loremflickr.com/800/400/shower", alt: "Ванная «Модерн», фото 2" },
     ],
     category: "Ванная",
     title: "Ванная «Модерн»",
@@ -221,8 +221,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet1/800/400", alt: "Санузел «Стандарт», фото 1" },
-      { src: "https://picsum.photos/seed/toilet2/800/400", alt: "Санузел «Стандарт», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Стандарт», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Стандарт», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Стандарт»",
@@ -233,8 +233,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet3/800/400", alt: "Санузел «Премиум», фото 1" },
-      { src: "https://picsum.photos/seed/toilet4/800/400", alt: "Санузел «Премиум», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Премиум», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Премиум», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Премиум»",
@@ -245,8 +245,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet5/800/400", alt: "Санузел «Мини», фото 1" },
-      { src: "https://picsum.photos/seed/toilet6/800/400", alt: "Санузел «Мини», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Мини», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Мини», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Мини»",
@@ -257,8 +257,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet7/800/400", alt: "Санузел «Лофт», фото 1" },
-      { src: "https://picsum.photos/seed/toilet8/800/400", alt: "Санузел «Лофт», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Лофт», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Лофт», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Лофт»",
@@ -269,8 +269,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet9/800/400", alt: "Санузел «Эко», фото 1" },
-      { src: "https://picsum.photos/seed/toilet10/800/400", alt: "Санузел «Эко», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Эко», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Эко», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Эко»",
@@ -281,8 +281,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/toilet11/800/400", alt: "Санузел «Современный», фото 1" },
-      { src: "https://picsum.photos/seed/toilet12/800/400", alt: "Санузел «Современный», фото 2" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Современный», фото 1" },
+      { src: "https://loremflickr.com/800/400/toilet", alt: "Санузел «Современный», фото 2" },
     ],
     category: "Санузел",
     title: "Санузел «Современный»",
@@ -295,8 +295,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe1/800/400", alt: "Шкаф «Классика», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe2/800/400", alt: "Шкаф «Классика», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Классика», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Классика», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф «Классика»",
@@ -307,8 +307,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe3/800/400", alt: "Шкаф «Комфорт», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe4/800/400", alt: "Шкаф «Комфорт», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Комфорт», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Комфорт», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф «Комфорт»",
@@ -319,8 +319,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe5/800/400", alt: "Шкаф-купе «Стиль», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe6/800/400", alt: "Шкаф-купе «Стиль», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф-купе «Стиль», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф-купе «Стиль», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф-купе «Стиль»",
@@ -331,8 +331,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe7/800/400", alt: "Шкаф «Мини», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe8/800/400", alt: "Шкаф «Мини», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Мини», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Мини», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф «Мини»",
@@ -343,8 +343,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe9/800/400", alt: "Шкаф «Премиум», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe10/800/400", alt: "Шкаф «Премиум», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Премиум», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Премиум», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф «Премиум»",
@@ -355,8 +355,8 @@ export const products: IProduct[] = [
   {
     id: uuidv4(),
     images: [
-      { src: "https://picsum.photos/seed/wardrobe11/800/400", alt: "Шкаф «Модерн», фото 1" },
-      { src: "https://picsum.photos/seed/wardrobe12/800/400", alt: "Шкаф «Модерн», фото 2" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Модерн», фото 1" },
+      { src: "https://loremflickr.com/800/400/wardrobe", alt: "Шкаф «Модерн», фото 2" },
     ],
     category: "Шкафы",
     title: "Шкаф «Модерн»",

@@ -52,7 +52,7 @@ const AboutPage = () => {
           {!isMobile && (
             <div className={style.historyMedia}>
               <img
-                src="https://picsum.photos/seed/about4/650/400"
+                src="https://loremflickr.com/650/400/about"
                 alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
               />
             </div>
