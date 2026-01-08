@@ -1,10 +1,12 @@
 /* Общие стили */
 .modal {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-inline-size: 95vw;
     max-block-size: 95vh;
+    min-block-size: 450px;
     border-radius: 12px;
     border: 1px solid #e0e0e0;
     background: #fff;
@@ -65,15 +67,9 @@
     .modal {
         width: 95vw;
         max-width: none;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        transform: none;
-        border-radius: 16px 16px 0 0;
     }
 
     .modalContent {
-        border-radius: 16px 16px 0 0;
         padding: 16px;
     }
 }
