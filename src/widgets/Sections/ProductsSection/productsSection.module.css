@@ -1,0 +1,21 @@
+.cardsSection {
+    max-width: 1280px;
+    padding: var(--section-padding-top) 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .cardsSection {
+        padding: var(--section-padding-mobile-top) 10px;
+    }
+
+}

@@ -1,0 +1,18 @@
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--grid-gap);
+}
+
+.frame {
+  inline-size: 100%;
+  block-size: 600px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .map {
+    max-block-size: 400px;
+  }
+}

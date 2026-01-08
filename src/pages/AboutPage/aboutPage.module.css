@@ -1,0 +1,91 @@
+.pageContainer {
+    font-family: var(--font-family-base), sans-serif;
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-base);
+    color: var(--color-primary);
+    background-color: #f9f9f9;
+}
+
+.section {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding: 100px 10px;
+}
+
+.historySection {
+    display: flex;
+    align-items: start;
+    gap: var(--grid-gap);
+}
+
+.historyDescription {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    row-gap: 20px;
+}
+
+.historyText {
+    max-width: 60ch;
+}
+
+.historyMedia {
+    flex: 1 1 50%;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-card);
+}
+
+.workProcessSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--grid-gap);
+    width: 100%;
+}
+
+.cardItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--grid-gap);
+    block-size: 100%;
+    padding: 50px 30px;
+    border: 1px solid #e9e8f3;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.buttonsWrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .historyDescription {
+        align-items: center;
+    }
+
+    .section {
+        padding: var(--section-padding-mobile-top) 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .buttonsWrap {
+        flex-direction: column;
+    }
+
+    .historyDescription {
+        align-items: center;
+    }
+
+}
+

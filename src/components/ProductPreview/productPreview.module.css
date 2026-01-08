@@ -1,0 +1,119 @@
+.productPreview {
+    display: flex;
+    justify-content: space-between;
+    inline-size: 100%;
+    gap: 20px;
+    font-family: var(--font-family-base), sans-serif;
+}
+
+.sliderContainer {
+    max-inline-size: 800px;
+    inline-size: 100%;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    inline-size: 370px;
+    padding: 15px;
+    border-radius: var(--border-radius-sm);
+    background-color: #f8f9fa;
+}
+
+.productTitle {
+    font-size: 30px;
+}
+
+.productDescription {
+    font-size: 17px;
+    color: #495057;
+    line-height: 1.6; /* Улучшенная читаемость */
+    max-width: 300px;
+}
+
+.productInner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactButton {
+    max-inline-size: 225px;
+    padding: 15px 10px;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.contactButton:hover,
+.contactButton:focus-visible {
+    background-color: #5eb3f0;
+}
+
+.contactButton:active {
+    background-color: #2c60a0;
+}
+
+.separator {
+    background-color: #4a90e2;
+    margin-block-start: 5px;
+}
+
+@media screen and (max-width: 1450px) {
+    .sliderContainer {
+        /*inline-size: 700px;*/
+        max-inline-size: 700px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .sliderContainer {
+        max-inline-size: 600px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .sliderContainer {
+        max-inline-size: 500px;
+    }
+}
+
+/* Информация о карточке переезжает под слайдер */
+@media screen and (max-width: 1000px) {
+    .sliderContainer {
+        margin: 0 auto;
+    }
+
+    .productPreview {
+        flex-direction: column;
+    }
+
+    .productInfo {
+        justify-content: space-between;
+        align-items: start;
+        inline-size: 100%;
+    }
+
+    .productTitle {
+        font-size: 24px;
+    }
+
+    .productDescription {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .contactButton {
+        max-inline-size: 225px;
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+    .separator {
+        display: none;
+    }
+}

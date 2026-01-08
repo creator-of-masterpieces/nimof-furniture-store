@@ -1,73 +1,153 @@
-# React + TypeScript + Vite
+# Интернет‑магазин мебели — React + TypeScript SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Простой одностраничный магазин мебели на React с TypeScript. Минималистичный стек, быстрая загрузка, удобная навигация.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Демо
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Ссылка на демо‑версию] (заполните при развёртывании)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Особенности
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Чистый SPA без серверного рендеринга.
+- Маршрутизация через React Router.
+- Запросы к API через встроенный `fetch`.
+- Состояние корзины в `localStorage`.
+- Типобезопасность благодаря TypeScript.
+- Адаптивный дизайн (мобильные устройства поддерживаются).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Технологии
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+- **React** — интерфейс.
+- **TypeScript** — строгая типизация.
+- **React Router** — навигация.
+- **CSS Modules** — стили.
+- **Vite** — сборка проекта.
+
+## Установка
+
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/ваш-аккаунт/furniture-store.git
+   ```
+
+2. Перейдите в папку проекта:
+   ```bash
+   cd furniture-store
+   ```
+
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+
+4. Запустите разработку:
+   ```bash
+   npm run dev
+   ```
+
+5. Откройте в браузере: `http://localhost:3000`
+
+## Структура проекта
+
+
+```
+src/
+├── api/              # Запросы к бэкенду
+├── components/       # Переиспользуемые компоненты
+├── pages/            # Страницы приложения
+├── routes/           # Маршрутизация
+├── styles/           # CSS/модули
+├── utils/            # Утилиты (форматеры, helpers)
+├── App.tsx           # Главный компонент
+├── main.tsx          # Точка входа
+└── vite.config.ts   # Конфигурация сборки
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Доступные страницы
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **`/`** — главная страница.
+- **`/catalog`** — каталог товаров.
+- **`/product/:id`** — страница товара.
+- **`/cart`** — корзина.
+
+## Работа с API
+
+
+Проект ожидает, что бэкенд предоставляет следующие эндпоинты:
+
+
+- `GET /api/products` — список товаров.
+- `GET /api/products/:id` — товар по ID.
+
+
+Пример ответа товара (`Product`):
+```ts
+{
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  inStock: boolean;
+}
 ```
+
+## Настройка окружения
+
+1. Убедитесь, что у вас установлены:
+    - Node.js (версия 18+)
+    - npm (версия 9+)
+
+
+2. Для сборки продакшена:
+   ```bash
+   npm run build
+   ```
+
+3. Для запуска продакшена локально:
+   ```bash
+   npm run preview
+   ```
+
+## Запуск тестов
+
+Проект не включает тесты в базовой версии. Для добавления:
+- Используйте `Jest` + `React Testing Library`.
+- Создайте папку `tests/` и добавьте примеры.
+
+
+## Сборка и развёртывание
+
+1. Соберите проект:
+   ```bash
+   npm run build
+   ```
+
+2. Разверните папку `dist/` на любом статическом хостинге (Vercel, Netlify, GitHub Pages).
+
+## Лицензия
+
+
+Проект распространяется под лицензией **MIT**. См. файл `LICENSE`.
+
+
+## Контакты
+
+- **Автор**: [Ваше имя]
+- **Email**: [ваш email]
+- **GitHub**: [ссылка на ваш профиль]
+
+
+## TODO (планы развития)
+
+
+- Добавить фильтрацию каталога.
+- Реализовать оформление заказа.
+- Интегрировать платёжную систему.
+- Добавить SEO‑метатеги.
+- Внедрить глобальное состояние (при необходимости).

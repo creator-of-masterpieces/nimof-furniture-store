@@ -1,0 +1,97 @@
+/* Общие стили */
+.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-inline-size: 95vw;
+    max-block-size: 95vh;
+    min-block-size: 450px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+}
+
+.modal[open] {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.modalContent {
+    block-size: 100%;
+    padding: 30px;
+}
+
+.modalTitle {
+
+}
+
+.closeButton {
+    position: absolute;
+    top: -6px;
+    right: 5px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #c08a5a;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+    color: #e2ae7f;
+}
+
+.closeButton:active {
+    color: #946a40;
+}
+
+/*Стили для карточек товара (широкий контент) */
+.modalProduct {
+    inline-size: min(90vw, 1400px);
+    block-size: 640px;
+}
+
+/* Стили для форм обратной связи (компактный) */
+.modalForm {
+    inline-size: min(90vw, 500px); /* Уже, чем для товаров */
+    block-size: auto; /* Высота под контент формы */
+    max-block-size: 80vh; /* Ограничение по высоте */
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95vw;
+        max-width: none;
+    }
+
+    .modalContent {
+        padding: 35px 16px;
+    }
+
+    .modalProduct {
+        block-size: 95vh;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .modalProduct {
+        block-size: 90vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .modalProduct {
+        block-size: 80vh;
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -48%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}

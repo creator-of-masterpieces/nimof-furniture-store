@@ -1,0 +1,158 @@
+/*Переменные*/
+:root {
+  /* Цветовая палитра */
+  --color-primary: #1a1a1a;
+  --color-secondary: #fff;
+  --color-accent: #d4a373;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #1a1a1a;
+  --color-muted: #999999;
+  --color-error: #e63946;
+  --color-button-primary: #d4a373;
+  --color-button-secondary: #fff;
+  --color-button-primary-hover: #c08a5a;
+  --color-button-secondary-hover: #fff;
+
+  /* Типографика */
+  --font-family-base: 'Montserrat', Arial, Helvetica;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-xl: 32px;
+  --font-size-section-title: 40px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
+
+  /* Отступы */
+  --section-padding-top: 100px;
+  --section-padding-mobile-top: 20px;
+
+  /* Контейнеры и сетки */
+  --container-max-width: 1280px;
+  --grid-gap: 20px;
+
+  /* Границы и скругления */
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --border-width: 1px;
+  --border-color: #e0e0e0;
+
+  /* Тени */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  /*Анимация*/
+  --transition-color: color 0.3s ease;
+}
+
+/* Сброс CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* Корректировка размера текста в Safari */
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh; /* Минимум на высоту экрана */
+}
+
+/* Убираем отступы у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Ссылки без подчёркивания */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Кнопки и поля ввода без стилей браузера */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* Используем шрифт родителя */
+  color: inherit;
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Убираем рамку */
+  outline: none; /* Убираем фокус-рамку */
+}
+
+/* Корректировка изображений */
+img {
+  max-width: 100%; /* Адаптивность */
+  height: auto; /* Сохранение пропорций */
+  display: block; /* Убираем пробелы под изображениями */
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse; /* Слияние границ */
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem; /* Отступы внутри ячеек */
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit; /* Размер по умолчанию */
+}
+
+/* Формы */
+fieldset {
+  border: 0; /* Убираем рамку */
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+address {
+  font: inherit;
+}
+
+/* Скрытые элементы */
+[hidden] {
+  display: none !important;
+}
+
+/*------- ГЛОБАЛЬНЫЕ СТИЛИ -------*/
+#root {
+  scrollbar-gutter: stable;
+}
+
+body:has(dialog[open]):not(.mobile) {
+  overflow: hidden;
+  padding-inline-end: 17px;
+}
+
+/*Модальные окна*/
+#modal-root {
+  display: none;
+}
+
+#modal-root.active {
+  position: fixed;
+  display: block;
+  inset: 0;
+  z-index: 1000;
+  background: transparent;
+}
