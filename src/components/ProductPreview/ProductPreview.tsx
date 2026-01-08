@@ -21,11 +21,14 @@ const ProductPreview = (props: IProductPreviewProps) => {
   };
   return (
     <figure className={style.productPreview}>
+      {/* Слайдер */}
       <div className={style.sliderContainer}>
         <TestSwiper images={images} />
       </div>
 
+      {/* Описание товара */}
       <figcaption className={style.productInfo}>
+        {/* Заголовок */}
         <div>
           <h3 className={style.productTitle}>{title}</h3>
           <Separator className={style.separator} />
@@ -36,6 +39,7 @@ const ProductPreview = (props: IProductPreviewProps) => {
           <Separator className={style.separator} />
         </div>
 
+        {/* Описание */}
         <div>
           <div className={style.productInner}>
             <h4>Материал</h4>
@@ -44,6 +48,7 @@ const ProductPreview = (props: IProductPreviewProps) => {
           <Separator className={style.separator} />
         </div>
 
+        {/* Цена */}
         <div>
           <div className={style.productInner}>
             <h4>Цена</h4>
@@ -56,6 +61,8 @@ const ProductPreview = (props: IProductPreviewProps) => {
           Получить консультацию
         </button>
       </figcaption>
+
+      {/* Модалка с контактной формой */}
       {isContactsModalOpen && (
         <Modal
           variant={"Form"}
