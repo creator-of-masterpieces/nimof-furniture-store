@@ -12,19 +12,22 @@
     padding: 100px 10px;
 }
 
+.buttonsWrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .contactsSection {
     display: flex;
-    column-gap: 30px;
+    gap: 30px;
 }
 
 .companyContactsList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     gap: var(--grid-gap);
-    width: 100%;
-}
-
-.companyContactsList {
     inline-size: 100%;
 }
 
@@ -33,7 +36,6 @@
     flex-direction: column;
     align-items: center;
     row-gap: var(--grid-gap);
-    block-size: 100%;
     padding: 50px 30px;
     border: 1px solid #e9e8f3;
     border-radius: var(--border-radius-md);
@@ -56,4 +58,32 @@
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contactsSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .companyContactsSection {
+        inline-size: 100%;
+    }
+
+    .companyContactsList {
+        grid-template-columns: repeat(auto-fit, 300px);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .contactsFormSection {
+        inline-size: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .buttonsWrap {
+        flex-direction: column;
+    }
 }
