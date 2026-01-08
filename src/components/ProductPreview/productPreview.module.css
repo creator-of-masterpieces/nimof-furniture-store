@@ -82,7 +82,6 @@
     }
 }
 
-
 /* Информация о карточке переезжает под слайдер */
 @media screen and (max-width: 1000px) {
     .sliderContainer {
@@ -94,7 +93,6 @@
     }
 
     .productInfo {
-        flex-direction: row;
         justify-content: space-between;
         align-items: start;
         inline-size: 100%;
@@ -105,12 +103,13 @@
     }
 
     .productDescription {
+        max-width: 100%;
         font-size: 14px;
     }
 
     .contactButton {
         max-inline-size: 225px;
-        padding: 5px 5px;
+        padding: 10px 10px;
         font-size: 15px;
     }
 
