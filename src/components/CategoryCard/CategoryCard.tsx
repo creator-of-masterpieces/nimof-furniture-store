@@ -13,13 +13,8 @@ const CategoryCard = (props: ICategoryCard) => {
   // encodeURIComponent — защищает от спецсимволов в названии категории.
   const toWithFilter = `${to}?category=${encodeURIComponent(categoryKey)}`;
   return (
-    <Link
-      to={toWithFilter}
-      className={style.card}
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(${image})`,
-      }}
-    >
+    <Link to={toWithFilter} className={style.card}>
+      <div className={style.media} style={{ backgroundImage: `url(${image})` }} />
       <h3 className={style.cardTitle}>{title}</h3>
     </Link>
   );

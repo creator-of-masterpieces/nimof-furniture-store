@@ -27,7 +27,7 @@
 
   /* Отступы */
   --section-padding-top: 100px;
-  --section-padding-mobile-top: 30px;
+  --section-padding-mobile-top: 20px;
 
   /* Контейнеры и сетки */
   --container-max-width: 1280px;

@@ -87,4 +87,18 @@
     .cardTitle {
         font-size: 17px;
     }
+
+    .footer {
+        padding: 20px 0 20px;
+    }
+
+    .cardsContainer {
+        padding: 20px;
+    }
+
+    .dataContainer {
+        padding-block-start: 20px;
+    }
+
+
 }

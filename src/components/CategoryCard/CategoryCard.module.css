@@ -1,4 +1,5 @@
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -7,21 +8,47 @@
     overflow: hidden;
     border-radius: 8px;
     min-block-size: 300px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/living-room.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    aspect-ratio: 3 / 2;
     box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px 0;
-    transition: translate 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .card:hover,
-.card:focus-visible{
-    translate: 0 -5px;
+.card:focus-visible {
     box-shadow: rgba(0, 0, 0, 0.4) 0 10px 20px 0;
 }
 
+.media {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform .5s ease;
+}
+
+.media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background .3s ease;
+}
+
+.card:hover .media,
+.card:focus-visible .media {
+    transform: scale(1.06);
+}
+
+.card:hover .media::after,
+.card:focus-visible .media::after {
+    background: rgba(0, 0, 0, .35);
+}
+
 .cardTitle {
+    position: relative;
+    z-index: 1;
     color: var(--color-secondary);
     font-size: 28px;
     font-weight: 600;
@@ -34,8 +61,19 @@
     }
 
     .cardTitle {
-        color: var(--color-secondary);
         font-size: 23px;
-        font-weight: 600;
+    }
+
+    .card {
+        min-block-size: 150px;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: rgba(0, 0, 0, .1) 0 6px 15px;
+    }
+
+    .media {
+        transform: none;
     }
 }

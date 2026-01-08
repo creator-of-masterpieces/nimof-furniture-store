@@ -14,35 +14,45 @@ const CategoryCards = (props: ICategoryCardsProps) => {
       <div className={style.content}>
         <h2 className={style.categoryTitle}>{title}</h2>
         <ul className={style.categoryList}>
-          <li>
+          <li className={style.categoryItem}>
             <CategoryCard
               to={"/catalog"}
               categoryKey={"Гостиная"}
               title={"Гостиная"}
-              image={"/src/assets/images/lv1.jpg"}
+              image={"https://picsum.photos/seed/living/600/400"}
             />
           </li>
-          <li>
-            <CategoryCard to={"/catalog"} categoryKey={"Кухня"} title={"Кухня"} image={"/src/assets/images/kc1.jpg"} />
+          <li className={style.categoryItem}>
+            <CategoryCard
+              to={"/catalog"}
+              categoryKey={"Кухня"}
+              title={"Кухня"}
+              image={"https://picsum.photos/seed/kitchen/600/400"}
+            />
           </li>
-          <li>
+          <li className={style.categoryItem}>
             <CategoryCard
               to={"/catalog"}
               categoryKey={"Ванная"}
               title={"Ванная комната"}
-              image={"/src/assets/images/br1.jpg"}
+              image={"https://picsum.photos/seed/bath/600/400"}
             />
           </li>
-          <li>
+          <li className={style.categoryItem}>
             <CategoryCard
               to={"/catalog"}
               categoryKey={"Санузел"}
               title={"Санузел"}
-              image={"/src/assets/images/tl1.jpg"}
+              image={"https://picsum.photos/seed/toilet/600/400"}
             />
           </li>
-          <li>
-            <CategoryCard to={"/catalog"} categoryKey={"Шкафы"} title={"Шкафы"} image={"/src/assets/images/wr1.jpg"} />
+          <li className={style.categoryItem}>
+            <CategoryCard
+              to={"/catalog"}
+              categoryKey={"Шкафы"}
+              title={"Шкафы"}
+              image={"https://picsum.photos/seed/wardrobe/600/400"}
+            />
           </li>
         </ul>
       </div>
