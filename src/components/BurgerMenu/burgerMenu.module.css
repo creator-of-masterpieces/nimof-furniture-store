@@ -45,3 +45,9 @@
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width: 400px) {
+    .burgerModal {
+        inline-size: 60%;
+    }
+}

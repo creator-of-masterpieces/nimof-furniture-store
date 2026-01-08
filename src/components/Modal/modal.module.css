@@ -1,6 +1,5 @@
 /* Общие стили */
 .modal {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -72,7 +71,25 @@
     .modalContent {
         padding: 35px 16px;
     }
+
+    .modalProduct {
+        block-size: 95vh;
+    }
+
 }
+
+@media (max-width: 600px) {
+    .modalProduct {
+        block-size: 90vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .modalProduct {
+        block-size: 80vh;
+    }
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translate(-50%, -48%); }
