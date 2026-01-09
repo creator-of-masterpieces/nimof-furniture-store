@@ -9,7 +9,8 @@
 .section {
     max-width: 1700px;
     margin-inline: auto;
-    padding: 100px 10px;
+    padding-inline: 10px;
+    padding-block-end: 50px;
 }
 
 .filtersGalleryWrap {
