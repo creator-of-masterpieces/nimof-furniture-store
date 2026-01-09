@@ -25,6 +25,7 @@
 .categoryItem {
     overflow: hidden;
     border-radius: 8px;
+    display: flex;
 }
 
 @media screen and (max-width: 768px) {
