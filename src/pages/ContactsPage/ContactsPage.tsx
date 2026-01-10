@@ -10,12 +10,16 @@ import clsx from "clsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useRef } from "react";
 
 const ContactsPage = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const contactsSectionRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    contactsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  });
   return (
     <div className={style.pageContainer}>
-      <ScrollToTop />
       <Header isMobile={isMobile} />
       <main>
         {/*Секция Call To Action */}
@@ -37,7 +41,7 @@ const ContactsPage = () => {
         </CallToAction>
 
         {/*Секция Contacts */}
-        <section className={clsx(style.section, style.contactsSection)}>
+        <section className={clsx(style.section, style.contactsSection)} ref={contactsSectionRef}>
           {/*Блок company contacts*/}
           <div className={style.companyContactsSection}>
             <ul className={style.companyContactsList}>
