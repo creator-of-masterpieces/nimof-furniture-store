@@ -8,7 +8,6 @@ import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import clsx from "clsx";
 import ContactsForm from "../../components/ContactsForm/ContactsForm.tsx";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef } from "react";
 
