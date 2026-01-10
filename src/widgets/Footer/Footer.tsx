@@ -4,6 +4,7 @@ import { Copyright } from "../../shared/Copyright/Copyright.tsx";
 import { Card } from "../../shared/Card/Card.tsx";
 import ContactLink from "../../components/ContactLink/ContactLink.tsx";
 import NavigationList from "../../components/NavigationList/NavigationList.tsx";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -33,8 +34,8 @@ export const Footer = () => {
           <li>
             <Card className={styles.card}>
               <h3 className={styles.cardTitle}>контакты</h3>
-              <ContactLink href={"tel:+79688886668"} text={"+7 (968) 888-66-68"} icon={"📞"} />
-              <ContactLink href={"mailto:info@nimof.ru"} text={"info@nimof.ru"} icon={"✉"} />
+              <ContactLink href={"tel:+79688886668"} text={"+7 (968) 888-66-68"} type={"phone"} icon={FaPhone} />
+              <ContactLink href={"mailto:info@nimof.ru"} text={"info@nimof.ru"} type={"email"} icon={FaEnvelope} />
             </Card>
           </li>
           <li>
