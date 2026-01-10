@@ -6,8 +6,22 @@
 }
 
 .ctaPrimary {
+    position: relative;
     padding: 200px 20px 130px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://loremflickr.com/1280/800/hero');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.ctaPrimary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: linear-gradient(to top, #f9f9f9, transparent 100%);
 }
 
 .ctaSecondary {
