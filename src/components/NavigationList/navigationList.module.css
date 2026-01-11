@@ -64,7 +64,6 @@
 }
 
 .navLinkCurrent {
-    color: var(--color-accent);
     pointer-events: none;
 }
 
