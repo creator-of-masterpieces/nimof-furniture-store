@@ -55,7 +55,7 @@
 
 @media screen and (max-width: 768px) {
     .ctaPrimary {
-        padding: 30px 20px 30px;
+        padding: 100px 20px 130px;
     }
 
     .ctaSecondary {
@@ -81,7 +81,6 @@
 
 @media (max-width: 768px) {
     .ctaPrimary {
-        padding: 30px 20px;
         background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
         url("https://loremflickr.com/768/500/hero");
     }
