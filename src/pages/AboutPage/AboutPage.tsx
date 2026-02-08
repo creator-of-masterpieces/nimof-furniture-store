@@ -17,6 +17,7 @@ const AboutPage = () => {
   useEffect(() => {
     historySectionRef.current?.scrollIntoView({ behavior: "smooth" });
   });
+
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
@@ -57,8 +58,8 @@ const AboutPage = () => {
           {!isMobile && (
             <div className={style.historyMedia}>
               <img
-                src="https://loremflickr.com/650/400/about"
-                alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
+                src="/src/assets/images/lv-1-1000x600.jpg"
+                alt="Фото хорошо освещенной гостинной в холодных светлых тонах"
               />
             </div>
           )}
