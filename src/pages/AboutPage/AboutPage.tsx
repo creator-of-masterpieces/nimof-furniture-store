@@ -9,9 +9,15 @@ import FeatureCard from "../../components/FeatureCard/FeatureCard.tsx";
 import { FaHeadset, FaPenNib, FaWrench, FaTruck } from "react-icons/fa";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.tsx";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useRef } from "react";
 
 const AboutPage = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const historySectionRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    historySectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  });
+
   return (
     <div className={style.pageContainer}>
       <ScrollToTop />
@@ -34,7 +40,7 @@ const AboutPage = () => {
           </div>
         </CallToAction>
 
-        <section className={clsx(style.historySection, style.section)}>
+        <section className={clsx(style.historySection, style.section)} ref={historySectionRef}>
           <div className={style.historyDescription}>
             <SectionTitle tag={"h2"} title={"Наша история"} />
             <p className={style.historyText}>
@@ -52,8 +58,8 @@ const AboutPage = () => {
           {!isMobile && (
             <div className={style.historyMedia}>
               <img
-                src="https://loremflickr.com/650/400/about"
-                alt="Фото хорошо освещенной гостинной в зеленых тонах с бежевым диваном в центре"
+                src="/src/assets/images/lv-1-1000x600.jpg"
+                alt="Фото хорошо освещенной гостинной в холодных светлых тонах"
               />
             </div>
           )}

@@ -6,8 +6,23 @@
 }
 
 .ctaPrimary {
+    position: relative;
     padding: 200px 20px 130px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://loremflickr.com/1280/800/hero');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/images/lv-2000x1200.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ctaPrimary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: linear-gradient(to top, #f9f9f9, transparent 100%);
 }
 
 .ctaSecondary {
@@ -41,7 +56,7 @@
 
 @media screen and (max-width: 768px) {
     .ctaPrimary {
-        padding: 30px 20px 30px;
+        padding: 100px 20px 130px;
     }
 
     .ctaSecondary {
@@ -58,17 +73,9 @@
     }
 }
 
-@media (min-width: 1600px) {
-    .ctaPrimary {
-        background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://loremflickr.com/3800/1200/hero");
-    }
-}
-
 @media (max-width: 768px) {
     .ctaPrimary {
-        padding: 30px 20px;
         background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://loremflickr.com/768/500/hero");
+        url("../../assets/images/lv-1000x600.jpg");
     }
 }

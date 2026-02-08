@@ -30,6 +30,7 @@
 }
 
 .headerNavLink {
+    font-size: 15px;
     font-weight: var(--font-weight-medium);
     letter-spacing: .5px;
     text-transform: uppercase;
@@ -63,7 +64,6 @@
 }
 
 .navLinkCurrent {
-    color: var(--color-accent);
     pointer-events: none;
 }
 
