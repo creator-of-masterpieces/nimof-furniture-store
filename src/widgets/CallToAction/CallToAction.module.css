@@ -8,9 +8,10 @@
 .ctaPrimary {
     position: relative;
     padding: 200px 20px 130px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://loremflickr.com/1280/800/hero');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/images/lv-2000x1200.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -72,16 +73,9 @@
     }
 }
 
-@media (min-width: 1600px) {
-    .ctaPrimary {
-        background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://loremflickr.com/3800/1200/hero");
-    }
-}
-
 @media (max-width: 768px) {
     .ctaPrimary {
         background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-        url("https://loremflickr.com/768/500/hero");
+        url("../../assets/images/lv-1000x600.jpg");
     }
 }
